@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173f35">
+  <meta name="description" content="بوکمارک؛ دنیای بی‌پایان واژه‌ها در دستان شما. مطالعه دیجیتال، کتاب‌های گویا و دستیار هوشمند کتاب‌خوان.">
+  <title>بوکمارک | دنیای بی‌پایان واژه‌ها در دستان شما</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="صفحه اصلی بوکمارک">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M8 5.5A2.5 2.5 0 0 1 10.5 3h11A2.5 2.5 0 0 1 24 5.5V28l-8-5-8 5V5.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10h8M12 14h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <span class="brand-copy"><strong>بوکمارک</strong><small>کتاب‌هایی برای کشف جهان</small></span>
+      </a>
+
+      <nav class="main-nav" id="mainNavigation" aria-label="منوی اصلی">
+        <a href="#top">خانه</a>
+        <a href="#bestsellers">فروشگاه کتاب‌ها</a>
+        <a href="#categories">دسته‌بندی‌ها</a>
+        <a href="#join">مجله بوکمارک</a>
+        <a class="nav-highlight" href="#assistant">دستیار هوش مصنوعی</a>
+      </nav>
+
+      <div class="header-tools">
+        <label class="search-box" for="siteSearch">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>
+          <input id="siteSearch" type="search" placeholder="جست‌وجوی کتاب‌ها..." autocomplete="off" aria-label="جست‌وجو میان کتاب‌های پرفروش">
+        </label>
+        <button class="btn btn-primary header-buy" id="headerBuy" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 10.1a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.4L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></svg><span>ثبت خرید</span></button>
+        <button class="profile-button" type="button" id="profileButton"><span class="profile-avatar" aria-hidden="true">س</span><span>حساب کاربری</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button>
+        <button class="mobile-menu" id="mobileMenu" type="button" aria-expanded="false" aria-controls="mainNavigation"><span class="menu-lines" aria-hidden="true">☰</span><span class="sr-only">باز کردن منو</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="page-wrap">
+
+    <!-- ===== معرفی اصلی ===== -->
+    <section class="home-hero" aria-labelledby="homeTitle">
+      <div class="hero-copy">
+        <p class="hero-badge"><i aria-hidden="true"></i><span>ویژه‌نامه تحریریه زمستان ۱۴۰۳ • نسخه ۴٫۲</span></p>
+        <h1 id="homeTitle">دنیای بی‌پایان واژه‌ها در دستان شما</h1>
+        <p class="hero-lead">تجربه متمایز مطالعه دیجیتال با تایپوگرافی چشم‌نواز، صفحه بدون تشعشع و حس کاغذ دست‌ساز و دسترسی آنی به هزاران اثر شاهکار به همراه نسخه‌های صوتی غنی با گویندگان برجسته.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#bestsellers">کاوش در تازه‌ها <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5"/><path d="m11 6-6 6 6 6"/></svg></a>
+          <a class="btn btn-white" href="#assistant"><svg class="gold" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="m19 16 .7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7.7-2Z"/></svg> گفت‌وگو با دستیار کتاب‌خوان هوشمند</a>
+        </div>
+        <dl class="hero-stats">
+          <div><dt>عنوان کتاب دارای حق نشر</dt><dd>۴۲٬۰۰۰+</dd></div>
+          <div><dt>پالایش چشمی فونت فارسی</dt><dd>۱۰۰٪</dd></div>
+          <div><dt>رضایت بیش از ۲۵۰ هزار خواننده</dt><dd>۴٫۹</dd></div>
+        </dl>
+      </div>
+
+      <article class="feature-card" aria-label="کتاب منتخب ماه">
+        <span class="feature-ribbon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4.8A1.8 1.8 0 0 1 7.8 3h8.4A1.8 1.8 0 0 1 18 4.8V21l-6-3.8L6 21V4.8Z"/></svg></span>
+        <div class="feature-main">
+          <div class="feature-cover-wrap">
+            <div class="feature-top"><span class="pill-green">انتخاب ماه هیئت داوران</span><span>شماره ۷۸</span></div>
+            <div class="feature-cover">
+              <div class="bk-cover" style="--c1:#2f6b55;--c2:#16392d;--ink:#ecc977;--glow:#ecc97726"><span class="bk-title">هنر شفاف اندیشیدن</span><span class="bk-author">رولف دوبلی</span></div>
+              <span class="bk-badge audio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg> کتاب گویا</span>
+            </div>
+          </div>
+          <div class="feature-text">
+            <h2>هنر شفاف اندیشیدن</h2>
+            <p class="feature-authors">رولف دوبلی • ترجمه عادل فردوسی‌پور</p>
+            <p class="feature-quote">«خطاهای شناختی پنهانی که روزانه در تصمیم‌گیری‌های شغلی و شخصی‌مان تکرار می‌کنیم، در ۹۹ فصل کوتاه با بیانی عمیق و...»</p>
+            <p class="feature-rate"><b>۴٫۸۹</b> <small>(۱٬۴۲۰ نظر)</small> <span class="stars" aria-hidden="true">★★★★★</span></p>
+            <div class="feature-actions">
+              <button class="btn btn-primary" type="button" data-toast="مطالعه‌ی فوری در نسخه نمایشی فعال نیست."><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6c-2-1.5-5-2-8-1.5v13c3-.5 6 0 8 1.5 2-1.5 5-2 8-1.5v-13c-3-.5-6 0-8 1.5Z"/><path d="M12 6v13"/></svg> مطالعه فوری</button>
+              <button class="play-btn" type="button" aria-label="پخش نمونه‌ی صوتی" data-toast="پخش نمونه‌ی صوتی در نسخه نمایشی فعال نیست."><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7L8 5Z"/></svg></button>
+            </div>
+          </div>
+        </div>
+        <div class="feature-foot"><span class="feature-time"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> زمان تخمینی مطالعه: ۴ ساعت و ۲۰ دقیقه</span><span>نشر چشمه</span></div>
+      </article>
+    </section>
+
+    <!-- ===== جست‌وجو ===== -->
+    <section class="home-search" aria-label="جست‌وجوی کتاب">
+      <label class="big-search" for="mainSearch">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>
+        <input id="mainSearch" type="search" placeholder="جست‌وجوی کتاب، جستار، نویسنده، مترجم یا موضوع..." autocomplete="off" aria-label="جست‌وجوی کتاب، نویسنده یا موضوع">
+        <kbd class="kbd" aria-hidden="true">⌘K</kbd>
+      </label>
+      <div class="hot-keys">
+        <span>کلیدواژه‌های داغ:</span>
+        <button class="kw-chip" type="button" data-keyword="روانشناسی">روانشناسی</button>
+        <button class="kw-chip" type="button" data-keyword="فلسفه معاصر">فلسفه معاصر</button>
+        <button class="kw-chip" type="button" data-keyword="ادبیات داستانی جهان">ادبیات داستانی جهان</button>
+        <button class="kw-chip" type="button" data-keyword="مدیریت و بهره‌وری">مدیریت و بهره‌وری</button>
+      </div>
+    </section>
+
+    <!-- ===== دسته‌بندی‌ها ===== -->
+    <section class="home-section" id="categories" aria-labelledby="catTitle">
+      <div class="section-heading"><div><span class="section-kicker">دسته‌بندی‌های تحریریه‌ای</span><h2 id="catTitle">قفسه‌های موضوعی بوکمارک</h2></div><a href="#categories" data-toast="فهرست کامل شاخه‌ها در نسخه نمایشی فعال نیست.">مشاهده تمامی شاخه‌ها <span aria-hidden="true">‹</span></a></div>
+      <div class="cat-grid">
+        <button class="cat-card" type="button" data-keyword="رمان"><span class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6c-2-1.5-5-2-8-1.5v13c3-.5 6 0 8 1.5 2-1.5 5-2 8-1.5v-13c-3-.5-6 0-8 1.5Z"/><path d="M12 6v13"/></svg></span><strong>رمان و ادبیات</strong><small>۱۲٬۴۰۰ اثر</small></button>
+        <button class="cat-card" type="button" data-keyword="فلسفه"><span class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3Z"/></svg></span><strong>تفکر انتقادی و فلسفه</strong><small>۶٬۸۰۰ اثر</small></button>
+        <button class="cat-card" type="button" data-keyword="عادت"><span class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><strong>توسعه فردی</strong><small>۵٬۱۲۰ اثر</small></button>
+        <button class="cat-card" type="button" data-keyword="تاریخ"><span class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9 12 4l9 5"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8"/><path d="M3 20h18"/></svg></span><strong>تاریخ و اسطوره‌شناسی</strong><small>۴٬۳۵۰ اثر</small></button>
+        <button class="cat-card" type="button" data-keyword="هنر"><span class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 2-.8 2-1.8 0-1.2-1-1.5-1-2.7 0-.9.8-1.5 1.7-1.5H17a4 4 0 0 0 4-4C21 6.5 17 3 12 3Z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7.5" r="1"/><circle cx="14.5" cy="7.5" r="1"/></svg></span><strong>هنر و معماری</strong><small>۲٬۹۰۰ اثر</small></button>
+        <button class="cat-card" type="button" data-keyword="شعر"><span class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4c-8 0-13 5-13 12v4"/><path d="M20 4c0 6-4 10-10 10"/><path d="M7 20h6"/></svg></span><strong>شعر و متون کهن</strong><small>۳٬۶۰۰ اثر</small></button>
+      </div>
+    </section>
+
+    <!-- ===== نقل‌قول ===== -->
+    <section class="qband" aria-label="سخنی درباره کتاب">
+      <span class="q-mark" aria-hidden="true">“</span>
+      <figure class="q-body" id="quoteBody" aria-live="polite">
+        <blockquote class="q-text" id="quoteText">«کتاب خواندن به این معناست که در کوتاه‌ترین زمان، عمیق‌ترین تجربیات بهترین ذهن‌های بشریت را به زندگی خود بیفزاییم.»</blockquote>
+        <figcaption class="q-src" id="quoteSrc">خورخه لوئیس بورخس • درباره جادوی کتاب و جاودانگی اندیشه</figcaption>
+      </figure>
+      <div class="q-nav">
+        <button class="round-btn" type="button" id="quotePrev" aria-label="گفته قبلی"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button>
+        <button class="round-btn" type="button" id="quoteNext" aria-label="گفته بعدی"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button>
+      </div>
+    </section>
+
+    <!-- ===== پرفروش‌ها ===== -->
+    <section class="home-section" id="bestsellers" aria-labelledby="bestTitle">
+      <div class="section-heading"><div><span class="section-kicker"><i class="dot" aria-hidden="true"></i>پربازدیدترین آثار هفته</span><h2 id="bestTitle">پرفروش‌ترین‌های بوکمارک</h2></div>
+        <div class="seg" role="group" aria-label="نوع اثر">
+          <button type="button" data-type="all" aria-pressed="true">همه آثار</button>
+          <button type="button" data-type="audio" aria-pressed="false">صوتی</button>
+          <button type="button" data-type="text" aria-pressed="false">متنی</button>
+        </div>
+      </div>
+
+      <div class="bk-grid" id="bookGrid">
+        <article class="bk-card" data-type="text">
+          <div class="bk-media"><button class="bk-save" type="button" aria-pressed="false" aria-label="افزودن کلیدر به نشانک‌ها"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.8A1.8 1.8 0 0 1 7.8 3h8.4A1.8 1.8 0 0 1 18 4.8V21l-6-3.8L6 21V4.8Z"/></svg></button><div class="bk-cover" style="--c1:#2a3f80;--c2:#141f4a;--ink:#f1d38b;--glow:#f2b45a55"><span class="bk-title">کلیدر</span><span class="bk-author">محمود دولت‌آبادی</span></div><span class="bk-badge">متن کامل</span></div>
+          <div class="bk-body"><div class="bk-meta"><span>نشر چشمه</span><span class="bk-rate"><b>★</b> ۴٫۹</span></div><h3>کلیدر (دوره کامل)</h3><p class="bk-writer">محمود دولت‌آبادی</p>
+            <div class="bk-foot"><div class="bk-price"><del>۱۸۰٬۰۰۰</del><strong>۱۲۶٬۰۰۰<span>تومان</span></strong></div><button class="bk-cart" type="button" aria-label="افزودن کلیدر به سبد" title="افزودن به سبد"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 10.1a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.4L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></svg></button></div></div>
+        </article>
+
+        <article class="bk-card" data-type="audio">
+          <div class="bk-media"><button class="bk-save" type="button" aria-pressed="false" aria-label="افزودن انسان خردمند به نشانک‌ها"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.8A1.8 1.8 0 0 1 7.8 3h8.4A1.8 1.8 0 0 1 18 4.8V21l-6-3.8L6 21V4.8Z"/></svg></button><div class="bk-cover" style="--c1:#ecd9b8;--c2:#cfab7d;--ink:#6e341c;--glow:#d9825055"><span class="bk-title">انسان خردمند</span><span class="bk-author">یووال نوح هراری</span></div><span class="bk-badge audio">کتاب گویا</span></div>
+          <div class="bk-body"><div class="bk-meta"><span>نشر نو</span><span class="bk-rate"><b>★</b> ۴٫۸</span></div><h3>انسان خردمند</h3><p class="bk-writer">یووال نوح هراری • نیک گرگین</p>
+            <div class="bk-foot"><div class="bk-price"><del>۱۲۰٬۰۰۰</del><strong>۸۴٬۰۰۰<span>تومان</span></strong></div><button class="bk-cart" type="button" aria-label="افزودن انسان خردمند به سبد" title="افزودن به سبد"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 10.1a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.4L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></svg></button></div></div>
+        </article>
+
+        <article class="bk-card" data-type="text">
+          <div class="bk-media"><button class="bk-save" type="button" aria-pressed="false" aria-label="افزودن جنایت و مکافات به نشانک‌ها"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.8A1.8 1.8 0 0 1 7.8 3h8.4A1.8 1.8 0 0 1 18 4.8V21l-6-3.8L6 21V4.8Z"/></svg></button><div class="bk-cover" style="--c1:#4a1a26;--c2:#170a0e;--ink:#f0c2b0;--glow:#c8453355"><span class="bk-title">جنایت و مکافات</span><span class="bk-author">فئودور داستایفسکی</span></div><span class="bk-badge">متن کامل</span></div>
+          <div class="bk-body"><div class="bk-meta"><span>نشر خوارزمی</span><span class="bk-rate"><b>★</b> ۴٫۹۵</span></div><h3>جنایت و مکافات</h3><p class="bk-writer">فئودور داستایفسکی • مهری آهی</p>
+            <div class="bk-foot"><div class="bk-price"><del>۱۵۰٬۰۰۰</del><strong>۱۰۵٬۰۰۰<span>تومان</span></strong></div><button class="bk-cart" type="button" aria-label="افزودن جنایت و مکافات به سبد" title="افزودن به سبد"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 10.1a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.4L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></svg></button></div></div>
+        </article>
+
+        <article class="bk-card" data-type="both">
+          <div class="bk-media"><button class="bk-save" type="button" aria-pressed="false" aria-label="افزودن عادت‌های اتمی به نشانک‌ها"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.8A1.8 1.8 0 0 1 7.8 3h8.4A1.8 1.8 0 0 1 18 4.8V21l-6-3.8L6 21V4.8Z"/></svg></button><div class="bk-cover" style="--c1:#f4e9d2;--c2:#e0cca2;--ink:#3b3a2c;--glow:#f0a04b44"><span class="bk-title">عادت‌های اتمی</span><span class="bk-author">جیمز کلیر</span></div><span class="bk-badge">متن + صوت</span></div>
+          <div class="bk-body"><div class="bk-meta"><span>نشر میلکان</span><span class="bk-rate"><b>★</b> ۴٫۷</span></div><h3>عادت‌های اتمی</h3><p class="bk-writer">جیمز کلیر • هادی بهمنی</p>
+            <div class="bk-foot"><div class="bk-price"><del>۹۵٬۰۰۰</del><strong>۶۶٬۵۰۰<span>تومان</span></strong></div><button class="bk-cart" type="button" aria-label="افزودن عادت‌های اتمی به سبد" title="افزودن به سبد"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 10.1a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.4L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></svg></button></div></div>
+        </article>
+
+        <article class="bk-card" data-type="text">
+          <div class="bk-media"><button class="bk-save" type="button" aria-pressed="false" aria-label="افزودن وقتی نیچه گریست به نشانک‌ها"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.8A1.8 1.8 0 0 1 7.8 3h8.4A1.8 1.8 0 0 1 18 4.8V21l-6-3.8L6 21V4.8Z"/></svg></button><div class="bk-cover" style="--c1:#5a5340;--c2:#262218;--ink:#ecdcb3;--glow:#e8c88a33"><span class="bk-title">وقتی نیچه گریست</span><span class="bk-author">اروین د. یالوم</span></div><span class="bk-badge">متن کامل</span></div>
+          <div class="bk-body"><div class="bk-meta"><span>نشر قطره</span><span class="bk-rate"><b>★</b> ۴٫۹</span></div><h3>وقتی نیچه گریست</h3><p class="bk-writer">اروین یالوم • سپیده حبیب</p>
+            <div class="bk-foot"><div class="bk-price"><del>۱۱۰٬۰۰۰</del><strong>۷۷٬۰۰۰<span>تومان</span></strong></div><button class="bk-cart" type="button" aria-label="افزودن وقتی نیچه گریست به سبد" title="افزودن به سبد"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 10.1a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.4L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></svg></button></div></div>
+        </article>
+      </div>
+      <p class="empty-search hidden" id="bookEmpty" role="status">کتابی با این عبارت پیدا نشد. عبارت دیگری را امتحان کنید.</p>
+    </section>
+
+    <!-- ===== دستیار هوشمند ===== -->
+    <section class="ai-panel" id="assistant" aria-labelledby="aiTitle">
+      <div class="ai-copy">
+        <p class="ai-badge"><i class="dot" aria-hidden="true"></i>دستیار هوشمند تحلیلی بوکمارک</p>
+        <h2 id="aiTitle">با کتاب‌هایتان وارد گفت‌وگو شوید؛ هوش مصنوعی در خدمت تعمق، نه شتاب‌زدگی</h2>
+        <p class="ai-text">دیگر نیاز نیست در میان صدها صفحه سردرگم شوید. دستیار اختصاصی بوکمارک امکان خلاصه تعاملی، استخراج شواهد متنی، پرسش مستقیم از محتوای کتاب و پیشنهاد برنامه‌ریزی روزانه بر اساس سرعت مطالعه شما را فراهم می‌کند.</p>
+        <div class="ai-features">
+          <div class="ai-feature"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/></svg>پرسش و پاسخ تعاملی با متن کتاب</div>
+          <div class="ai-feature"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><path d="m9 15 2 2 4-4"/></svg>برنامه مطالعه ۲۰ دقیقه‌ای هوشمند</div>
+          <div class="ai-feature"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h10a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3V4Z"/><path d="M9 9h5M9 13h5"/></svg>خلاصه‌سازی جستاری و مفهومی</div>
+          <div class="ai-feature"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 14a4 4 0 0 0 7 0"/><path d="M9 9.5h.01M15 9.5h.01"/></svg>پیشنهاد بر مبنای خلق و خو و سلیقه</div>
+        </div>
+        <div class="ai-cta">
+          <button class="btn btn-peach" type="button" data-toast="دوره‌ی آزمایشی دستیار در نسخه نمایشی فعال نیست."><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15c-1.5 1-2 4-2 6 2 0 5-.5 6-2"/><path d="M14 4c3-1 6-1 7-1 0 1 0 4-1 7l-7 7-5-5 6-8Z"/><circle cx="15.5" cy="8.5" r="1.3"/></svg> آغاز آزمایشی رایگان دستیار</button>
+          <button class="ai-link" type="button" data-toast="ویدیوی معرفی در نسخه نمایشی فعال نیست.">مشاهده نحوه عملکرد در یک دقیقه <span aria-hidden="true">‹</span></button>
+        </div>
+      </div>
+
+      <div class="chat-card" aria-label="نمونه گفت‌وگو با دستیار">
+        <div class="chat-head"><span class="chat-title"><i class="dot" aria-hidden="true"></i>نمونه گفت‌وگوی زنده با «چنین گفت زرتشت»</span><span class="live-badge">هوشمند</span></div>
+        <div class="chat-q">«منظور نیچه از مفهوم "ابرانسان" در بخش نخست کتاب دقیقاً چیست؟»</div>
+        <div class="chat-a">
+          <h4><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/></svg>پاسخ تحلیلی دستیار بوکمارک:</h4>
+          <p>نیچه ابرانسان (Übermensch) را انسانی می‌داند که بر پوچ‌گرایی و ارزش‌های فرسوده‌ی سنتی غلبه کرده و خودش معنابخش زندگی خویش است؛ او پل میان حیوان و انسان برتر ترسیم می‌شود...</p>
+          <div class="chat-a-foot"><span>مرجع: گفتار زرتشت، صفحه ۴۲</span><a href="#assistant" data-toast="نمایش در متن کتاب در نسخه نمایشی فعال نیست.">مشاهده در متن کتاب</a></div>
+        </div>
+        <form class="chat-input" id="chatForm">
+          <label class="sr-only" for="chatField">پرسش شما</label>
+          <input id="chatField" type="text" placeholder="از این کتاب بپرسید..." autocomplete="off">
+          <button type="submit" class="chat-send" aria-label="ارسال پرسش"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 16-8-6 16-2.5-6.5L4 12Z"/></svg></button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== چرا بوکمارک ===== -->
+    <section class="home-section why" aria-labelledby="whyTitle">
+      <div class="why-head"><span class="section-kicker">تعهد تحریریه</span><h2 id="whyTitle">چرا مطالعه در بوکمارک متفاوت است؟</h2><p>ما پلتفرمی ساخته‌ایم که تکنولوژی در خدمت سکوت ذهن و ارتقای کیفیت مطالعه باشد، نه ایجاد حواس‌پرتی.</p></div>
+      <div class="why-grid">
+        <article class="why-card"><span class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></span><h3>فناوری محافظت چشم رتینا</h3><p>تنظیم هوشمند درجه حرارت نور بر پایه ساعت شبانه‌روز و بازتولید کنتراست دقیق کاغذ کاهی و کرم، برای جلسات مطالعه چندین ساعته بدون خستگی.</p></article>
+        <article class="why-card"><span class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/><path d="m9 10.5 2 2 4-4"/></svg></span><h3>همگام‌سازی ابری بی‌درنگ</h3><p>یادداشت‌ها، هایلایت‌ها و نشانک‌های شما به صورت آنی بین رایانه، تبلت و تلفن همراه همگام می‌شوند، بدون آنکه کلمه‌ای را از دست بدهید.</p></article>
+        <article class="why-card"><span class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M14.8 9.5a3.5 3.5 0 1 0 0 5"/></svg></span><h3>رعایت کامل حق تألیف و نشر</h3><p>هر کتاب موجود در بوکمارک با عقد قرارداد رسمی با نویسندگان و ناشران معتبر ایرانی عرضه شده تا از چرخه نشر اندیشه در ایران پاسداری شود.</p></article>
+      </div>
+    </section>
+
+    <!-- ===== عضویت ===== -->
+    <section class="join-card" id="join" aria-labelledby="joinTitle">
+      <div class="join-copy"><h2 id="joinTitle">به حلقه ۳۵ هزار نفری «باشگاه خوانندگان بوکمارک» بپیوندید</h2><p>هر سه‌شنبه، یک جستار تأمل‌برانگیز اختصاصی همراه با خلاصه صوتی یک شاهکار ادبی، مستقیماً در صندوق ورودی شما.</p></div>
+      <div class="join-box">
+        <form class="join-form" id="joinForm" novalidate>
+          <label class="sr-only" for="joinEmail">نشانی ایمیل</label>
+          <input id="joinEmail" type="email" placeholder="ایمیل کاری یا شخصی شما..." autocomplete="email" required>
+          <button class="btn btn-dark" type="submit">عضویت رایگان</button>
+        </form>
+        <small class="join-message" id="joinMessage" role="status" aria-live="polite"></small>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="newsletter">
+    <div class="footer-grid">
+      <div class="footer-about"><a class="footer-brand" href="#top">بوک<span>مارک.</span></a><p>جایی برای پیدا کردن کتاب‌هایی که نگاه ما را به جهان کمی تغییر می‌دهند. آرام بگردید، کشف کنید و بخوانید.</p><div class="socials"><a href="#newsletter" aria-label="اینستاگرام">◎</a><a href="#newsletter" aria-label="تلگرام">➤</a><a href="#newsletter" aria-label="شبکه اجتماعی">◉</a></div></div>
+      <div><h3>دسترسی سریع</h3><a href="#top">صفحه اصلی</a><a href="#bestsellers">فروشگاه کتاب‌ها</a><a href="index.html#details">درباره کتاب</a><a href="contact.html">تماس با ما</a></div>
+      <div><h3>خدمات بوکمارک</h3><a href="#assistant">دستیار هوش مصنوعی</a><a href="#bestsellers">پیشنهاد کتاب</a><a href="faq.html#order">راهنمای خرید</a><a href="faq.html">پرسش‌های متداول</a></div>
+      <div class="newsletter"><h3>نامه‌ای از دنیای کتاب</h3><p>برای دریافت معرفی کتاب‌ها و پیشنهادهای تازه عضو شوید.</p><form id="newsletterForm"><label class="sr-only" for="emailInput">نشانی ایمیل</label><input id="emailInput" type="email" placeholder="ایمیل شما" required autocomplete="email"><button type="submit">عضویت در خبرنامه <span aria-hidden="true">←</span></button></form><small id="newsletterMessage" role="status" aria-live="polite"></small></div>
+    </div>
+    <div class="footer-bottom"><span>© ۱۴۰۵ بوکمارک؛ برای کسانی که عاشق کشف‌اند.</span><div><span>حریم خصوصی</span><span>قوانین استفاده</span><span>پشتیبانی</span></div></div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

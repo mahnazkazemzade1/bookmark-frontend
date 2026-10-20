@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173f35">
+  <meta name="description" content="پرسش‌های متداول بوکمارک؛ پاسخ سؤال‌های رایج درباره سفارش، ارسال، پرداخت، مرجوعی و حساب کاربری.">
+  <title>پرسش‌های متداول | بوکمارک</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="faq.css">
+  <script src="faq.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html#top" aria-label="صفحه اصلی بوکمارک">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M8 5.5A2.5 2.5 0 0 1 10.5 3h11A2.5 2.5 0 0 1 24 5.5V28l-8-5-8 5V5.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10h8M12 14h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <span class="brand-copy"><strong>بوکمارک</strong><small>کتاب‌هایی برای کشف جهان</small></span>
+      </a>
+
+      <nav class="main-nav" id="mainNavigation" aria-label="منوی اصلی">
+        <a href="index.html#top">خانه</a>
+        <a href="index.html#suggestions">فروشگاه کتاب‌ها</a>
+        <a href="index.html#details">دسته‌بندی‌ها</a>
+        <a href="#newsletter">مجله بوکمارک</a>
+        <a class="nav-highlight" href="#assistant">دستیار هوش مصنوعی</a>
+      </nav>
+
+      <div class="header-tools">
+        <label class="search-box" for="siteSearch">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>
+          <input id="siteSearch" type="search" placeholder="جست‌وجو در پرسش‌ها..." autocomplete="off" aria-label="جست‌وجو در پرسش‌های متداول">
+        </label>
+        <button class="btn btn-primary header-buy" id="headerBuy" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 10.1a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.4L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></svg><span>ثبت خرید</span></button>
+        <button class="profile-button" type="button" id="profileButton"><span class="profile-avatar" aria-hidden="true">س</span><span>حساب کاربری</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button>
+        <button class="mobile-menu" id="mobileMenu" type="button" aria-expanded="false" aria-controls="mainNavigation"><span class="menu-lines" aria-hidden="true">☰</span><span class="sr-only">باز کردن منو</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="page-wrap">
+    <nav class="breadcrumbs" aria-label="مسیر صفحه"><a href="index.html#top">خانه</a><span>‹</span><span aria-current="page">پرسش‌های متداول</span></nav>
+
+    <section class="faq-hero" aria-labelledby="faqTitle">
+      <div>
+        <span class="faq-kicker">مرکز راهنمای بوکمارک</span>
+        <h1 id="faqTitle">پرسش‌های متداول</h1>
+        <p>پاسخ رایج‌ترین سؤال‌ها درباره‌ی سفارش، ارسال، پرداخت و پشتیبانی را اینجا پیدا کنید. اگر جوابتان را نیافتید، تیم پشتیبانی کنارتان است.</p>
+      </div>
+      <label class="search-box faq-search" for="faqSearch">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>
+        <input id="faqSearch" type="search" placeholder="سؤال‌تان را بنویسید؛ مثلاً «ارسال»" autocomplete="off" aria-label="جست‌وجو در پرسش‌های متداول">
+      </label>
+    </section>
+
+    <div class="faq-chips" role="group" aria-label="دسته‌بندی پرسش‌ها">
+      <button class="chip" type="button" data-filter="all" aria-pressed="true">همه</button>
+      <button class="chip" type="button" data-filter="order" aria-pressed="false">سفارش و خرید</button>
+      <button class="chip" type="button" data-filter="shipping" aria-pressed="false">ارسال</button>
+      <button class="chip" type="button" data-filter="payment" aria-pressed="false">پرداخت</button>
+      <button class="chip" type="button" data-filter="returns" aria-pressed="false">مرجوعی و پشتیبانی</button>
+      <button class="chip" type="button" data-filter="account" aria-pressed="false">حساب کاربری</button>
+    </div>
+
+    <div class="faq-layout">
+      <section aria-label="فهرست پرسش‌ها">
+        <p class="faq-count" id="faqCount" role="status" aria-live="polite"></p>
+        <div class="faq-list" id="faqList">
+
+          <article class="faq-item" data-cat="order">
+            <h3><button class="faq-q" type="button" id="faq-q1" aria-expanded="false" aria-controls="faq-a1"><span>چطور یک کتاب را سفارش بدهم؟</span><i class="faq-icon" aria-hidden="true"></i></button></h3>
+            <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1" hidden><p>صفحه‌ی کتاب را باز کنید و دکمه‌ی «ثبت خرید» را بزنید. سپس اطلاعات تحویل را کامل کنید و پرداخت را انجام دهید. پس از ثبت سفارش، شماره‌ی سفارش به شما نمایش داده می‌شود.</p></div>
+          </article>
+
+          <article class="faq-item" data-cat="order">
+            <h3><button class="faq-q" type="button" id="faq-q2" aria-expanded="false" aria-controls="faq-a2"><span>بعد از ثبت، می‌توانم سفارشم را تغییر بدهم یا لغو کنم؟</span><i class="faq-icon" aria-hidden="true"></i></button></h3>
+            <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2" hidden><p>تا پیش از آماده‌سازی بسته می‌توانید با پشتیبانی تماس بگیرید و درخواست تغییر یا لغو بدهید. پس از ارسال، تغییر سفارش ممکن نیست و باید از مسیر مرجوعی اقدام کنید.</p></div>
+          </article>
+
+          <article class="faq-item" data-cat="order">
+            <h3><button class="faq-q" type="button" id="faq-q3" aria-expanded="false" aria-controls="faq-a3"><span>تخفیف‌ها چطور اعمال می‌شوند؟</span><i class="faq-icon" aria-hidden="true"></i></button></h3>
+            <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3" hidden><p>قیمت تخفیف‌خورده کنار قیمت اصلی و با درصد تخفیف نمایش داده می‌شود. مبلغ نهایی همان است که پیش از پرداخت در صفحه‌ی سفارش می‌بینید.</p></div>
+          </article>
+
+          <article class="faq-item" data-cat="order">
+            <h3><button class="faq-q" type="button" id="faq-q4" aria-expanded="false" aria-controls="faq-a4"><span>از کجا بفهمم یک کتاب موجود است؟</span><i class="faq-icon" aria-hidden="true"></i></button></h3>
+            <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4" hidden><p>وضعیت موجودی در صفحه‌ی هر کتاب و کنار امتیاز آن نوشته شده است، مثلاً «موجود برای خرید». اگر کتابی ناموجود بود، می‌توانید آن را نشانک کنید و بعداً سر بزنید.</p></div>
+          </article>
+
+          <article class="faq-item" data-cat="shipping">
+            <h3><button class="faq-q" type="button" id="faq-q5" aria-expanded="false" aria-controls="faq-a5"><span>ارسال سفارش چقدر طول می‌کشد؟</span><i class="faq-icon" aria-hidden="true"></i></button></h3>
+            <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5" hidden><p>زمان ارسال به شهر مقصد و روش ارسال بستگی دارد. تخمین زمان تحویل هنگام تکمیل سفارش نشان داده می‌شود.</p></div>
+          </article>
+
+          <article class="faq-item" data-cat="shipping">
+            <h3><button class="faq-q" type="button" id="faq-q6" aria-expanded="false" aria-controls="faq-a6"><span>آیا به همه‌ی شهرها ارسال می‌کنید؟</span><i class="faq-icon" aria-hidden="true"></i></button></h3>
+            <div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6" hidden><p>بله، سفارش‌ها به سراسر کشور ارسال می‌شوند. هزینه و زمان ارسال بر اساس نشانی شما در مرحله‌ی پایانی خرید مشخص می‌شود.</p></div>
+          </article>
+
+          <article class="faq-item" data-cat="shipping">
+            <h3><button class="faq-q" type="button" id="faq-q7" aria-expanded="false" aria-controls="faq-a7"><span>چطور سفارشم را رهگیری کنم؟</span><i class="faq-icon" aria-hidden="true"></i></button></h3>
+            <div class="faq-a" id="faq-a7" role="region" aria-labelledby="faq-q7" hidden><p>بعد از ارسال بسته، کد رهگیری برای شما ثبت می‌شود. با همان کد می‌توانید مسیر بسته را دنبال کنید. اگر کدی دریافت نکردید، شماره‌ی سفارش را برای پشتیبانی بفرستید.</p></div>
+          </article>
+
+          <article class="faq-item" data-cat="payment">
+            <h3><button class="faq-q" type="button" id="faq-q8" aria-expanded="false" aria-controls="faq-a8"><span>چه روش‌های پرداختی وجود دارد؟</span><i class="faq-icon" aria-hidden="true"></i></button></h3>
+            <div class="faq-a" id="faq-a8" role="region" aria-labelledby="faq-q8" hidden><p>پرداخت به‌صورت آنلاین و از طریق درگاه امن بانکی انجام می‌شود. اطلاعات کارت شما فقط در صفحه‌ی بانک وارد می‌شود و در سایت ذخیره نمی‌شود.</p></div>
+          </article>
+
+          <article class="faq-item" data-cat="payment">
+            <h3><button class="faq-q" type="button" id="faq-q9" aria-expanded="false" aria-controls="faq-a9"><span>مبلغ از حسابم کم شد ولی سفارش ثبت نشد، چه کنم؟</span><i class="faq-icon" aria-hidden="true"></i></button></h3>
+            <div class="faq-a" id="faq-a9" role="region" aria-labelledby="faq-q9" hidden><p>معمولاً مبلغ کسرشده پس از چند روز کاری به حساب شما برمی‌گردد. برای پیگیری سریع‌تر، شماره‌ی پیگیری پرداخت و زمان تراکنش را برای پشتیبانی بفرستید.</p></div>
+          </article>
+
+          <article class="faq-item" data-cat="returns">
+            <h3><button class="faq-q" type="button" id="faq-q10" aria-expanded="false" aria-controls="faq-a10"><span>شرایط مرجوع کردن کتاب چیست؟</span><i class="faq-icon" aria-hidden="true"></i></button></h3>
+            <div class="faq-a" id="faq-a10" role="region" aria-labelledby="faq-q10" hidden><p>اگر کتاب اشتباه برایتان ارسال شده یا آسیب‌دیده است، درخواست مرجوعی ثبت کنید. بسته‌بندی و فاکتور را نگه دارید تا بررسی سریع‌تر انجام شود.</p></div>
+          </article>
+
+          <article class="faq-item" data-cat="returns">
+            <h3><button class="faq-q" type="button" id="faq-q11" aria-expanded="false" aria-controls="faq-a11"><span>کتابم آسیب‌دیده رسیده؛ چطور اطلاع بدهم؟</span><i class="faq-icon" aria-hidden="true"></i></button></h3>
+            <div class="faq-a" id="faq-a11" role="region" aria-labelledby="faq-q11" hidden><p>چند عکس واضح از کتاب و بسته‌بندی بگیرید و همراه شماره‌ی سفارش برای پشتیبانی بفرستید. تیم پشتیبانی پس از بررسی، راه‌حل را به شما اعلام می‌کند.</p></div>
+          </article>
+
+          <article class="faq-item" data-cat="account">
+            <h3><button class="faq-q" type="button" id="faq-q12" aria-expanded="false" aria-controls="faq-a12"><span>چطور حساب کاربری بسازم؟</span><i class="faq-icon" aria-hidden="true"></i></button></h3>
+            <div class="faq-a" id="faq-a12" role="region" aria-labelledby="faq-q12" hidden><p>از دکمه‌ی «حساب کاربری» در بالای صفحه وارد بخش ورود و ثبت‌نام شوید و اطلاعات خواسته‌شده را تکمیل کنید. با داشتن حساب، پیگیری سفارش‌ها ساده‌تر می‌شود.</p></div>
+          </article>
+
+          <article class="faq-item" data-cat="account">
+            <h3><button class="faq-q" type="button" id="faq-q13" aria-expanded="false" aria-controls="faq-a13"><span>نشانک‌ها کجا ذخیره می‌شوند؟</span><i class="faq-icon" aria-hidden="true"></i></button></h3>
+            <div class="faq-a" id="faq-a13" role="region" aria-labelledby="faq-q13" hidden><p>با دکمه‌ی «افزودن به نشانک‌ها» در صفحه‌ی کتاب می‌توانید کتاب را ذخیره کنید. در نسخه‌ی فعلی، نشانک‌ها فقط تا پایان همان نشست مرورگر باقی می‌مانند.</p></div>
+          </article>
+
+        </div>
+        <p class="empty-search hidden" id="faqEmpty" role="status">پرسشی با این عبارت پیدا نشد. عبارت دیگری را امتحان کنید یا از پشتیبانی بپرسید.</p>
+      </section>
+
+      <aside class="faq-side" aria-label="راهنمای بیشتر">
+        <div class="help-card">
+          <h2>جوابتان را پیدا نکردید؟</h2>
+          <p>سؤالتان را برای پشتیبانی بفرستید تا در اسرع وقت پاسخ بگیرید.</p>
+          <div class="help-actions">
+            <button class="btn btn-primary" type="button" id="contactSupport"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/></svg> ارسال پیام به پشتیبانی</button>
+            <a class="btn btn-light" href="index.html#top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg> بازگشت به صفحه‌ی اصلی</a>
+          </div>
+        </div>
+        <div class="help-card soft">
+          <h2>دسترسی سریع</h2>
+          <div class="help-links">
+            <a href="#order" data-quick="order">سفارش و خرید</a>
+            <a href="#shipping" data-quick="shipping">ارسال و رهگیری</a>
+            <a href="#returns" data-quick="returns">مرجوعی و پشتیبانی</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="newsletter">
+    <div class="footer-grid">
+      <div class="footer-about"><a class="footer-brand" href="index.html#top">بوک<span>مارک.</span></a><p>جایی برای پیدا کردن کتاب‌هایی که نگاه ما را به جهان کمی تغییر می‌دهند. آرام بگردید، کشف کنید و بخوانید.</p><div class="socials"><a href="#newsletter" aria-label="اینستاگرام">◎</a><a href="#newsletter" aria-label="تلگرام">➤</a><a href="#newsletter" aria-label="شبکه اجتماعی">◉</a></div></div>
+      <div><h3>دسترسی سریع</h3><a href="index.html#top">صفحه اصلی</a><a href="index.html#suggestions">فروشگاه کتاب‌ها</a><a href="index.html#details">درباره کتاب</a><a href="#newsletter">تماس با ما</a></div>
+      <div id="assistant"><h3>خدمات بوکمارک</h3><a href="#assistant">دستیار هوش مصنوعی</a><a href="index.html#suggestions">پیشنهاد کتاب</a><a href="#order">راهنمای خرید</a><a href="#top">پرسش‌های متداول</a></div>
+      <div class="newsletter"><h3>نامه‌ای از دنیای کتاب</h3><p>برای دریافت معرفی کتاب‌ها و پیشنهادهای تازه عضو شوید.</p><form id="newsletterForm"><label class="sr-only" for="emailInput">نشانی ایمیل</label><input id="emailInput" type="email" placeholder="ایمیل شما" required autocomplete="email"><button type="submit">عضویت در خبرنامه <span aria-hidden="true">←</span></button></form><small id="newsletterMessage" role="status" aria-live="polite"></small></div>
+    </div>
+    <div class="footer-bottom"><span>© ۱۴۰۵ بوکمارک؛ برای کسانی که عاشق کشف‌اند.</span><div><span>حریم خصوصی</span><span>قوانین استفاده</span><span>پشتیبانی</span></div></div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,291 @@
+/* ========== توکن‌ها و پایه (هم‌سبک صفحه‌های قبلی) ========== */
+:root{--cream:#f7f4ec;--cream-2:#eee9dc;--green:#173f35;--green-2:#28584b;--green-deep:#0b2b23;--mint:#dcebe0;--peach:#ffddb0;--gold:#e8ad57;--text:#183d33;--muted:#748178;--white:#fff;--line:#e7e2d8;--shadow:0 8px 26px #20392b0b;--radius:16px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{margin:0;background:var(--cream);color:var(--text);font-family:'Vazirmatn',Tahoma,sans-serif;font-size:14px;line-height:1.85}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit}
+button{cursor:pointer;color:inherit}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #e5ad60;outline-offset:3px}
+svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+del{text-decoration-thickness:1px}
+.icon-sprite{position:absolute;width:0;height:0;overflow:hidden}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.hidden{display:none!important}
+
+/* ========== هدر ========== */
+.site-header{position:sticky;top:0;z-index:20;background:#faf8f1ed;backdrop-filter:blur(16px)}
+.header-inner{max-width:1320px;min-height:82px;margin:auto;padding:10px 28px;display:flex;align-items:center;gap:24px}
+.brand{display:flex;align-items:center;gap:10px;white-space:nowrap;flex-shrink:0}
+.brand-mark{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:var(--green);color:#ffddb0;box-shadow:0 5px 12px #173f3524}
+.brand-mark svg{width:27px;height:27px}
+.brand-copy strong,.brand-copy small{display:block;line-height:1.5}
+.brand-copy strong{font-size:19px;font-weight:800;letter-spacing:-.5px}
+.brand-copy small{font-size:9px;color:var(--muted)}
+.main-nav{display:flex;align-items:center;gap:3px;flex:1;justify-content:center}
+.main-nav a{font-size:12px;font-weight:600;padding:11px 12px;border-radius:10px;white-space:nowrap;color:#53675c;transition:background .2s,color .2s,transform .2s}
+.main-nav a:hover{background:#c5dccd;color:#0f2f26;transform:translateY(-1px)}
+.main-nav .nav-highlight{background:var(--peach);color:#283e32;font-weight:800}
+.main-nav .nav-highlight:hover{background:#ffc47e}
+.header-tools{display:flex;align-items:center;gap:9px;flex-shrink:0}
+.cart-link{display:inline-flex;align-items:center;gap:7px;padding:9px 13px;border-radius:11px;background:var(--green);color:#fff;font-size:11px;font-weight:800;white-space:nowrap;transition:background .2s,transform .2s}
+.cart-link:hover{background:#245648;transform:translateY(-1px)}
+.cart-link svg{width:17px;height:17px}
+.cart-badge{display:grid;place-items:center;min-width:20px;height:20px;padding:0 5px;border-radius:10px;background:var(--peach);color:#283e32;font-size:10px;line-height:1}
+.profile-button{display:flex;align-items:center;gap:7px;border:1px solid var(--line);background:#fff;border-radius:11px;padding:6px 9px;font-size:10px;font-weight:700;color:var(--green);white-space:nowrap}
+.profile-button>svg{width:14px;height:14px}
+.profile-avatar{display:grid;place-items:center;width:28px;height:28px;border-radius:9px;background:#dcebe0;font-size:12px}
+.mobile-menu{display:none;border:0;background:var(--green);color:#fff;border-radius:9px;padding:9px 12px}
+.menu-lines{font-size:19px}
+/* نوار مراحل خرید در لبه هدر؛ مرحله جاری از سمت راست پر می‌شود */
+.goal-strip{position:absolute;inset:auto 0 0;height:4px;background:#dfdcd4}
+.goal-strip i{display:block;height:100%;width:var(--value);background:var(--gold);animation:fillIn 1.4s .2s cubic-bezier(.2,.7,.2,1) both}
+@keyframes fillIn{from{width:0}}
+
+/* ========== چیدمان ========== */
+.page-wrap{max-width:1320px;padding:44px 40px 58px;margin:auto}
+
+/* ========== مراحل خرید ========== */
+.checkout-steps{display:flex;align-items:center;gap:16px;list-style:none;margin:0;padding:22px 30px;background:#fff;border:1px solid #f0eee7;border-radius:14px;box-shadow:var(--shadow)}
+.step{display:flex;align-items:center;gap:14px;flex:1;min-width:0;color:#8a948d}
+.step-number{display:grid;place-items:center;flex-shrink:0;width:44px;height:44px;border-radius:50%;background:#f0ede4;font-size:17px;font-weight:800;color:#8a948d}
+.step-copy strong,.step-copy small{display:block;line-height:1.7}
+.step-copy strong{font-size:15px;font-weight:800}
+.step-copy small{font-size:10px;color:#9aa39d}
+.step.is-active{color:var(--text)}
+.step.is-active .step-number{background:var(--green-deep);color:#fff}
+.step.is-active small{color:#6d7d73}
+.step-sep{display:grid;place-items:center;color:#b9bfb9}
+.step-sep svg{width:18px;height:18px}
+
+/* ========== ستون اصلی ========== */
+.cart-layout{display:grid;grid-template-columns:minmax(0,1fr) 384px;gap:24px;align-items:start;margin-top:40px}
+.cart-main{min-width:0}
+.cart-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;margin-bottom:22px}
+.cart-heading h1{margin:0;font-size:28px;line-height:1.5;font-weight:800;letter-spacing:-.8px}
+.cart-heading h1 small{font-size:11px;font-weight:500;letter-spacing:0;color:#7b877e}
+.clear-button{display:inline-flex;align-items:center;gap:6px;border:0;background:transparent;padding:4px 2px;font-size:10px;color:#7b877e;transition:color .2s}
+.clear-button:hover{color:#b5524c}
+.clear-button svg{width:15px;height:15px}
+.cart-list{display:flex;flex-direction:column;gap:24px}
+
+.cart-item{position:relative;display:grid;grid-template-columns:130px minmax(0,1fr);gap:24px;padding:24px;background:#fff;border:1px solid #f0eee7;border-radius:16px;box-shadow:var(--shadow);transition:opacity .25s,transform .25s,box-shadow .2s}
+.cart-item:hover{box-shadow:0 12px 28px #213b2a12}
+.cart-item.is-leaving{opacity:0;transform:translateX(-26px)}
+.cart-item.is-new{animation:itemIn .45s cubic-bezier(.2,.7,.2,1)}
+@keyframes itemIn{from{opacity:0;transform:translateY(14px)}}
+.cover-ribbon{position:absolute;top:0;inset-inline-end:24px;z-index:2;width:14px;height:26px;background:var(--gold);border-radius:0 0 3px 3px}
+.cover-ribbon::after{content:"";position:absolute;top:9px;inset-inline:4px;height:6px;border-radius:50%;background:#1a1a17}
+.item-cover{position:relative;margin:0;align-self:start;aspect-ratio:2/3;border-radius:10px;overflow:hidden;background:#eee9df;box-shadow:0 6px 16px #213b2a14}
+.item-cover img{display:block;width:100%;height:100%;object-fit:cover}
+.tone-green{background:#dfe8e1}
+.tone-gold{background:#eadfc6}
+.tone-sand{background:#f1e8d7}
+.cover-badge{position:absolute;bottom:8px;inset-inline:8px;display:flex;align-items:center;justify-content:center;gap:5px;padding:5px 6px;border-radius:7px;background:#fffffff2;color:var(--green);font-size:9px;font-weight:800;box-shadow:0 2px 8px #0000001f;white-space:nowrap}
+.cover-badge.is-dark{background:#0e2d26eb;color:#f4efe2}
+.cover-badge svg{width:13px;height:13px}
+.cover-badge b{font-weight:800;letter-spacing:.2px}
+.item-body{display:flex;flex-direction:column;min-width:0}
+.item-tags{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.tag{background:var(--mint);color:var(--green);border-radius:7px;padding:0 10px;font-size:10px;font-weight:700}
+.rating{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:700;color:#9a6a1f}
+.rating b{color:var(--gold)}
+.rating small{font-size:10px;font-weight:400;color:#8a948d}
+.rating.is-plain{color:#6d7d73;font-weight:500}
+.rating svg{width:13px;height:13px}
+.item-body h2{margin:6px 0 4px;font-size:21px;line-height:1.6;font-weight:800;letter-spacing:-.5px}
+.item-meta{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin:0;font-size:11px;line-height:2.1;color:#7b877e}
+.item-meta strong{font-weight:700;color:var(--text)}
+.item-meta i{font-style:normal;color:#b9bfb9;margin-inline:3px}
+.item-meta svg{width:14px;height:14px;color:#8a948d}
+.item-foot{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:16px;border-top:1px solid #f1efe9}
+.cart-item .item-meta+.item-foot{margin-top:18px}
+.item-actions{display:flex;align-items:center;gap:18px}
+.item-actions button{display:inline-flex;align-items:center;gap:6px;border:0;background:transparent;padding:4px 0;font-size:10px;color:#7b877e;transition:color .2s}
+.item-actions button:hover{color:var(--green)}
+.item-actions button[data-act="remove"]:hover{color:#b5524c}
+.item-actions svg{width:15px;height:15px}
+.item-price{display:flex;align-items:baseline;gap:7px;flex-wrap:wrap}
+.item-price strong{font-size:24px;line-height:1.5;font-weight:800;letter-spacing:-.8px;color:var(--text)}
+.item-price span{font-size:10px;color:#7b877e}
+.item-price del{font-size:10px;color:#a4aaa4}
+.item-price em{font-style:normal;font-size:9px;font-weight:700;color:#8a5a14;background:var(--peach);padding:1px 8px;border-radius:5px}
+
+.cart-empty{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;padding:52px 24px;background:#fff;border:1px solid #f0eee7;border-radius:16px;box-shadow:var(--shadow)}
+.empty-icon{display:grid;place-items:center;width:62px;height:62px;margin-bottom:8px;border-radius:50%;background:#f0ede4;color:var(--green)}
+.empty-icon svg{width:28px;height:28px}
+.cart-empty h2{margin:0;font-size:20px;font-weight:800}
+.cart-empty p{margin:0 0 14px;font-size:12px;color:#7b877e}
+.btn-light-link{display:inline-block;padding:11px 20px;border-radius:10px;background:var(--green);color:#fff;font-size:12px;font-weight:800;transition:background .2s}
+.btn-light-link:hover{background:#245648}
+
+/* ========== پیشنهاد هوشمند ========== */
+.upsell{margin-top:32px;padding:26px 24px 24px;background:linear-gradient(180deg,#f1eee5,#ece7da);border:1px solid #ebe6d9;border-radius:18px;box-shadow:var(--shadow)}
+.upsell-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.upsell-head h2{display:flex;align-items:center;gap:10px;margin:0;font-size:16px;font-weight:800}
+.upsell-icon{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:var(--peach);color:var(--green)}
+.upsell-icon svg{width:17px;height:17px}
+.upsell-badge{background:var(--peach);color:#8a5a14;border-radius:999px;padding:1px 12px;font-size:10px;font-weight:700}
+.upsell-text{margin:12px 0 16px;font-size:11px;color:#6d7d73}
+.upsell-card{display:flex;align-items:center;gap:18px;padding:22px 24px;background:#fff;border-radius:14px;box-shadow:0 4px 16px #213b2a0d}
+.upsell-cover{flex-shrink:0;width:56px;height:80px;object-fit:cover;border-radius:6px;background:#e8ece9;box-shadow:0 4px 10px #213b2a1f}
+.upsell-info{flex:1;min-width:0}
+.upsell-info h3{margin:0;font-size:15px;line-height:1.7;font-weight:800}
+.upsell-info p{margin:0 0 4px;font-size:10px;color:#7b877e}
+.upsell-info p i{font-style:normal;color:#b9bfb9;margin-inline:4px}
+.upsell-info .item-price strong{font-size:20px}
+.btn-dark{display:inline-flex;align-items:center;justify-content:center;gap:8px;flex-shrink:0;border:0;border-radius:10px;padding:13px 20px;background:var(--green-deep);color:var(--peach);font-size:13px;font-weight:800;white-space:nowrap;transition:background .2s,transform .2s}
+.btn-dark:hover{background:#12392f;transform:translateY(-1px)}
+.btn-dark:disabled{opacity:.6;cursor:default;transform:none}
+.btn-dark svg{width:18px;height:18px}
+
+/* ========== ستون کناری ========== */
+.cart-aside{position:sticky;top:98px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.bill-card,.trust-card{background:#fff;border:1px solid #f0eee7;border-radius:16px;box-shadow:var(--shadow)}
+.bill-card{padding:24px 24px 18px}
+.bill-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:14px;margin-bottom:16px;border-bottom:1px solid #eeeae1}
+.bill-head h2{margin:0;font-size:17px;font-weight:800;letter-spacing:-.3px}
+.bill-head svg{width:22px;height:22px;color:#52665b}
+.bill-row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:12px;font-size:13px;color:#4d6056}
+.bill-row strong{font-weight:700;font-size:13px;color:var(--text);white-space:nowrap}
+.bill-row strong.is-gold{color:#7a4f10}
+.bill-plus{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:6px;padding:9px 12px;background:#e5f0e8;border-radius:9px;font-size:11px;color:#2f5545}
+.bill-plus>span{display:inline-flex;align-items:center;gap:7px}
+.bill-plus svg{width:15px;height:15px}
+.bill-plus strong{font-weight:700;white-space:nowrap}
+.bill-plus.is-promo{background:#fbeed6;color:#7a4f10}
+.bill-plus button{display:grid;place-items:center;width:20px;height:20px;border:0;border-radius:50%;background:#0000000f;padding:0}
+.bill-plus button svg{width:11px;height:11px}
+.bill-total{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:14px;padding:18px 0 4px;border-top:1px dashed #e0dccf}
+.bill-total strong,.bill-total small{display:block;line-height:1.7}
+.bill-total strong{font-size:14px;font-weight:800}
+.bill-total small{font-size:10px;color:#7b877e}
+.bill-amount{display:flex;align-items:baseline;gap:5px;white-space:nowrap}
+.bill-amount b{font-size:34px;line-height:1.3;font-weight:800;letter-spacing:-1.4px;color:var(--green)}
+.bill-amount span{font-size:10px;color:#7b877e}
+.promo-form{margin-top:18px}
+.promo-form label{display:block;margin-bottom:8px;font-size:10px;font-weight:700;color:#4d6056}
+.promo-row{display:flex;gap:8px}
+.promo-field{flex:1;min-width:0;display:flex;align-items:center;gap:8px;height:46px;padding:0 12px;background:#f4f1e9;border:1px solid transparent;border-radius:10px;color:#8b958d;transition:border-color .2s,box-shadow .2s}
+.promo-field:focus-within{border-color:#799c88;box-shadow:0 0 0 3px #dcebe0}
+.promo-field svg{width:18px;height:18px;flex-shrink:0}
+.promo-field input{min-width:0;width:100%;border:0;outline:0;background:transparent;font-size:12px;font-weight:600;color:var(--text);text-align:right}
+.promo-field input::placeholder{color:#8b958d;font-weight:400}
+.btn-soft{flex-shrink:0;min-width:64px;border:0;border-radius:10px;background:#e8e3d5;color:var(--text);font-size:12px;font-weight:800;transition:background .2s}
+.btn-soft:hover{background:#ddd7c6}
+.promo-message{min-height:0;margin:6px 0 0;font-size:10px;color:#2e6b4e}
+.promo-message:empty{display:none}
+.promo-message.is-error{color:#b5524c}
+.btn-checkout{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:18px;padding:18px 16px;border:0;border-radius:14px;background:var(--green-deep);color:#fff;font-size:16px;font-weight:800;box-shadow:0 10px 22px #0b2b2338;transition:background .2s,transform .2s}
+.btn-checkout:hover{background:#12392f;transform:translateY(-1px)}
+.btn-checkout:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+.btn-checkout svg{width:16px;height:16px}
+.secure-note{margin:10px 0 0;text-align:center;font-size:9px;color:#7b877e}
+.trust-card{padding:18px 20px 16px}
+.trust-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding-bottom:10px;border-bottom:1px solid #eeeae1}
+.trust-head h2{margin:0;font-size:14px;line-height:1.7;font-weight:800}
+.trust-head p{margin:0;font-size:10px;color:#7b877e}
+.trust-head>svg{width:24px;height:24px;color:var(--green);flex-shrink:0}
+.trust-list{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;list-style:none;margin:14px 0 0;padding:0;text-align:center;font-size:10px;color:#6d7d73}
+.trust-list span{display:grid;place-items:center;width:42px;height:42px;margin:0 auto 4px;border-radius:12px;background:#f0ede4;color:var(--green)}
+.trust-list svg{width:22px;height:22px}
+.quote-card{margin:0;padding:18px 20px;background:#f0ede4;border:1px solid #ebe6d9;border-radius:14px}
+.quote-card blockquote{margin:0;font-size:12px;font-style:italic;line-height:2.1;color:#52665b}
+.quote-card figcaption{margin-top:6px;font-size:10px;color:#8a948d}
+
+/* ========== مزایا ========== */
+.perk-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:36px}
+.perk{padding:20px 22px;background:#fbfaf6;border:1px solid #f0eee7;border-radius:14px}
+.perk h3{display:flex;align-items:center;gap:9px;margin:0 0 4px;font-size:14px;font-weight:800}
+.perk h3 svg{width:22px;height:22px;color:var(--gold)}
+.perk p{margin:0;font-size:11px;line-height:2.1;color:#7b877e}
+
+/* ========== پیام کوتاه ========== */
+.toast{position:fixed;bottom:22px;inset-inline:0;z-index:40;display:flex;align-items:center;gap:14px;width:max-content;max-width:calc(100% - 32px);margin:0 auto;padding:10px 18px;background:var(--green);color:#fff;font-size:11px;line-height:1.9;border-radius:11px;box-shadow:0 12px 28px #0b2b2340;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .25s,transform .25s}
+.toast.show{opacity:1;transform:none;pointer-events:auto}
+.toast button{border:0;background:transparent;padding:0;font-size:11px;font-weight:800;color:var(--peach);text-decoration:underline;text-underline-offset:4px}
+
+/* ========== فوتر ========== */
+.site-footer{background:var(--green);color:#f8f3e9;padding:38px max(28px,calc((100% - 1264px)/2)) 18px;margin-top:8px}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:36px}
+.footer-brand{display:inline-block;font-size:25px;font-weight:800;letter-spacing:-1px}
+.footer-brand span{color:#ffdbad}
+.footer-about p,.newsletter p{font-size:10px;color:#b9c9bf;line-height:2.2}
+.socials{display:flex;gap:9px}
+.socials a{display:grid;place-items:center;width:33px;height:33px;background:#0f332b;border-radius:9px;transition:background .2s}
+.socials a:hover{background:#2a5c4c}
+.footer-grid h3{font-size:12px;color:#ffdbad;margin:3px 0 12px}
+.footer-grid>div:not(.footer-about):not(.newsletter)>a{display:block;font-size:10px;color:#c6d2ca;margin:7px 0}
+.footer-grid>div>a:hover{color:#ffdbad}
+.newsletter form{display:flex;flex-direction:column;gap:8px}
+.newsletter input{width:100%;background:#0f332b;border:1px solid #2a5145;border-radius:8px;padding:11px;color:#fff;font-size:10px;outline:none}
+.newsletter input::placeholder{color:#9eb4a6}
+.newsletter button{display:flex;justify-content:space-between;align-items:center;border:0;border-radius:8px;background:#ffdbad;color:#263e32;padding:10px 12px;font-size:11px;font-weight:800}
+.newsletter button:hover{background:#ffd096}
+.newsletter small{display:block;font-size:10px;color:#d7e4db;margin-top:6px}
+.footer-bottom{border-top:1px solid #ffffff20;margin-top:30px;padding-top:15px;display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:9px;color:#b9c9bf}
+.footer-bottom div{display:flex;gap:8px;flex-wrap:wrap}
+.footer-bottom div span{background:#0f332b;padding:5px 8px;border-radius:6px}
+
+/* ========== واکنش‌گرا ========== */
+@media(max-width:1150px){
+  .header-inner{gap:13px;padding-inline:18px}
+  .main-nav a{padding:10px 8px;font-size:10px}
+  .page-wrap{padding-inline:24px}
+  .cart-layout{grid-template-columns:minmax(0,1fr) 340px;gap:18px}
+  .cart-item{gap:18px;padding:20px}
+  .footer-grid{gap:22px}
+}
+@media(max-width:900px){
+  .header-inner{min-height:72px;flex-wrap:wrap}
+  .mobile-menu{display:block;order:5}
+  .main-nav{display:none;order:6;flex-basis:100%;flex-direction:column;align-items:stretch;gap:4px;padding:7px 0 10px}
+  .main-nav.open{display:flex}
+  .main-nav a{padding:10px 12px;font-size:12px}
+  .header-tools{margin-right:auto}
+  .profile-button>span:not(.profile-avatar){display:none}
+  .cart-layout{grid-template-columns:1fr}
+  .cart-aside{position:static}
+  .step-copy small{display:none}
+  .perk-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:620px){
+  .header-inner{padding-inline:12px;gap:9px}
+  .brand-copy strong{font-size:16px}
+  .brand-copy small{font-size:8px}
+  .brand-mark{width:35px;height:35px}
+  .header-tools{gap:4px}
+  .cart-link span:not(.cart-badge){display:none}
+  .profile-button{padding:4px}
+  .page-wrap{padding:24px 13px 36px}
+  .checkout-steps{padding:16px 14px;gap:8px}
+  .step{flex-direction:column;gap:6px;text-align:center}
+  .step-number{width:36px;height:36px;font-size:14px}
+  .step-copy strong{font-size:10px}
+  .step-sep{display:none}
+  .cart-layout{margin-top:28px}
+  .cart-heading h1{font-size:22px}
+  .cart-heading h1 small{display:block}
+  .cart-item{grid-template-columns:92px minmax(0,1fr);gap:14px;padding:16px}
+  .cover-ribbon{inset-inline-end:14px}
+  .item-body h2{font-size:16px}
+  .item-meta{font-size:10px}
+  .cover-badge{font-size:8px;inset-inline:5px;bottom:5px;gap:3px}
+  .cover-badge svg{display:none}
+  .item-price strong{font-size:20px}
+  .upsell{padding:20px 14px}
+  .upsell-card{flex-wrap:wrap;padding:16px}
+  .upsell-info{flex-basis:calc(100% - 80px)}
+  .btn-dark{width:100%}
+  .bill-card{padding:20px 16px 16px}
+  .bill-amount b{font-size:28px}
+  .footer-grid{grid-template-columns:1fr;gap:19px}
+  .site-footer{padding:28px 18px 15px}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:10px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+.tag.is-offer{background:var(--peach);color:#8a5a14}

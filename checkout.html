@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173f35">
+  <meta name="description" content="تسویه‌حساب و پرداخت امن در بوکمارک؛ بازبینی سفارش، انتخاب روش پرداخت و تحویل آنی کتاب‌های دیجیتال.">
+  <title>تسویه‌حساب و پرداخت | بوکمارک</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="checkout.css">
+  <script src="checkout.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="main.html" aria-label="صفحه اصلی بوکمارک">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M8 5.5A2.5 2.5 0 0 1 10.5 3h11A2.5 2.5 0 0 1 24 5.5V28l-8-5-8 5V5.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10h8M12 14h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <span class="brand-copy"><strong>بوکمارک</strong><small>کتاب‌هایی برای کشف جهان</small></span>
+      </a>
+
+      <nav class="main-nav" id="mainNavigation" aria-label="منوی اصلی">
+        <a href="main.html">خانه</a>
+        <a href="main.html#bestsellers">فروشگاه کتاب‌ها</a>
+        <a href="main.html#categories">دسته‌بندی‌ها</a>
+        <a href="#newsletter">مجله بوکمارک</a>
+        <a class="nav-highlight" href="main.html#assistant">دستیار هوش مصنوعی</a>
+      </nav>
+
+      <div class="header-tools">
+        <label class="search-box" for="siteSearch">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>
+          <input id="siteSearch" type="search" placeholder="جست‌وجوی کتاب‌ها..." autocomplete="off" aria-label="جست‌وجوی کتاب‌ها (با Enter به فروشگاه می‌روید)">
+        </label>
+        <button class="btn btn-primary header-buy" id="headerBuy" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 10.1a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.4L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></svg><span>ثبت خرید</span></button>
+        <button class="profile-button" type="button" id="profileButton"><span class="profile-avatar" aria-hidden="true">س</span><span>حساب کاربری</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button>
+        <button class="mobile-menu" id="mobileMenu" type="button" aria-expanded="false" aria-controls="mainNavigation"><span class="menu-lines" aria-hidden="true">☰</span><span class="sr-only">باز کردن منو</span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- مراحل خرید -->
+  <div class="stepper-band">
+    <ol class="stepper" id="stepper" aria-label="مراحل خرید" style="--progress:.5">
+      <li class="step is-done" id="step1"><span class="step-dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><span class="step-text"><strong>۱. سبد خرید</strong><small>تکمیل و بازبینی</small></span></li>
+      <li class="step is-current" id="step2" aria-current="step"><span class="step-dot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18"/><circle cx="16.5" cy="14.5" r="1.1"/></svg></span><span class="step-text"><strong>۲. تسویه‌حساب و پرداخت</strong><small>مرحله جاری</small></span></li>
+      <li class="step" id="step3"><span class="step-dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6c-2-1.5-5-2-8-1.5v13c3-.5 6 0 8 1.5 2-1.5 5-2 8-1.5v-13c-3-.5-6 0-8 1.5Z"/><path d="M12 6v13"/></svg></span><span class="step-text"><strong>۳. دریافت و کتابخانه</strong><small>افزودن آنی</small></span></li>
+    </ol>
+  </div>
+
+  <main id="top" class="page-wrap">
+    <nav class="breadcrumbs" aria-label="مسیر صفحه"><a href="main.html">خانه</a><span>‹</span><span>سبد خرید</span><span>‹</span><span aria-current="page">تسویه‌حساب و پرداخت</span></nav>
+
+    <section class="delivery-banner" aria-label="تحویل دیجیتال">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.5 2.8 7.8 7 10 4.2-2.2 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+      <div><h2>تحویل دیجیتال آنی و همیشگی</h2><p>بلافاصله پس از تکمیل تراکنش، تمامی فایل‌ها با استاندارد رمزنگاری امن در قفسه ابری «کتابخانه من» قرار می‌گیرند.</p></div>
+    </section>
+
+    <div class="checkout-layout">
+      <div class="checkout-main">
+
+        <!-- اطلاعات خریدار -->
+        <section class="co-card" aria-labelledby="buyerTitle">
+          <div class="co-head"><h2 id="buyerTitle"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="10" r="3"/><path d="M6.2 18c1.2-2 3.2-3 5.8-3s4.6 1 5.8 3"/></svg>اطلاعات خریدار و حساب کاربری</h2><span class="tag-mint">تأیید هویت شده</span></div>
+          <div class="buyer-box">
+            <div class="buyer-id"><span class="buyer-avatar" aria-hidden="true">س</span><div><strong>سارا راد</strong><small>عضویت ویژه سطح نقره‌ای</small></div></div>
+            <ul class="buyer-contact">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><span dir="ltr">sara.rad@example.com</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg><span dir="ltr">۰۹۱۲ ··· ۴۵۸۹</span><i class="verified-dot" aria-label="تأیید شده"></i></li>
+            </ul>
+          </div>
+          <p class="co-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/></svg><span>نسخه‌های دیجیتال بلافاصله پس از پرداخت به کتابخانه این حساب اضافه خواهند شد و لینک دانلود مستقیم نیز پیامک می‌شود.</span></p>
+        </section>
+
+        <!-- هدیه -->
+        <section class="co-card gift-card" aria-labelledby="giftTitle">
+          <div class="gift-row">
+            <span class="gift-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v8h14v-8M12 8v12"/><path d="M12 8c-2.5 0-4-1-4-2.5S9.5 3 11 4s1 4 1 4Zm0 0c2.5 0 4-1 4-2.5S14.5 3 13 4s-1 4-1 4Z"/></svg></span>
+            <div class="gift-text"><h2 id="giftTitle">این سفارش به عنوان هدیه فرهنگی برای دوست ارسال شود؟</h2><p>ارسال کارت پستال دیجیتال هنری همراه متن دلخواه شما</p></div>
+            <button class="switch" id="giftSwitch" type="button" role="switch" aria-checked="false" aria-labelledby="giftTitle" aria-controls="giftFields"><span class="switch-knob"></span></button>
+          </div>
+          <div class="gift-fields hidden" id="giftFields">
+            <div class="field"><label for="giftEmail">ایمیل دریافت‌کننده <b aria-hidden="true">*</b></label><input id="giftEmail" type="email" dir="ltr" placeholder="friend@example.com" autocomplete="off" aria-describedby="giftEmailError"><span class="field-error" id="giftEmailError"></span></div>
+            <div class="field"><label for="giftMessage">متن کارت پستال <small>(اختیاری)</small></label><textarea id="giftMessage" rows="3" maxlength="200" placeholder="چند جمله‌ی کوتاه برای دوستتان بنویسید..."></textarea></div>
+          </div>
+        </section>
+
+        <!-- روش پرداخت -->
+        <section class="co-card" aria-labelledby="payTitle">
+          <div class="co-head"><h2 id="payTitle"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18"/><circle cx="16.5" cy="14.5" r="1.1"/></svg>روش پرداخت را انتخاب نمایید</h2><span class="co-aside">درگاه‌های رسمی و مجاز</span></div>
+          <div class="pay-list" role="radiogroup" aria-labelledby="payTitle">
+
+            <label class="pay-option is-selected" data-method="gateway">
+              <input class="sr-only" type="radio" name="pay" value="gateway" checked>
+              <span class="pay-radio" aria-hidden="true"></span>
+              <div class="pay-main">
+                <div class="pay-head"><strong>درگاه پرداخت اینترنتی شاپرک</strong><span class="tag-dark">پیش‌فرض پایدار</span><span class="pay-spacer"></span><span class="bank-chips"><i>بانک سامان</i><i>به‌پرداخت ملت</i></span></div>
+                <p class="pay-desc">متصل به کلیه کارت‌های عضو شبکه شتاب با رمز دوم پویا و تاییدیه آنی شاپرک بانک مرکزی.</p>
+                <ul class="pay-features"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.5 2.8 7.8 7 10 4.2-2.2 7-5.5 7-10V6l-7-3Z"/></svg>رمزنگاری پیشرفته ۲۵۶ بیتی</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3 5 13h6l-1 8 8-10h-6l1-8Z"/></svg>تراکنش پرسرعت بدون قطعی</li></ul>
+              </div>
+            </label>
+
+            <label class="pay-option" data-method="wallet">
+              <input class="sr-only" type="radio" name="pay" value="wallet">
+              <span class="pay-radio" aria-hidden="true"></span>
+              <div class="pay-main">
+                <div class="pay-head"><strong>کیف پول بوکمارک</strong><small class="pay-balance">موجودی: <span id="walletBalance">۱۲۰٬۰۰۰</span> تومان</small><span class="pay-spacer"></span><span class="tag-peach">امکان کسر ترکیبی</span></div>
+                <p class="pay-desc" id="walletDesc"></p>
+              </div>
+            </label>
+
+            <label class="pay-option" data-method="snapp" id="snappOption">
+              <input class="sr-only" type="radio" name="pay" value="snapp">
+              <span class="pay-radio" aria-hidden="true"></span>
+              <div class="pay-main">
+                <div class="pay-head"><strong>پرداخت اقساطی اسنپ‌پی</strong><span class="tag-green">بدون کارمزد</span><span class="pay-spacer"></span><b class="pay-installment" id="snappInstallment"></b></div>
+                <p class="pay-desc" id="snappDesc">قسط اول امروز و مابقی در سه ماه آینده بدون نیاز به چک و سفته برای سبدهای بالای ۳۰۰ هزار تومان.</p>
+              </div>
+            </label>
+          </div>
+        </section>
+
+        <!-- حق نشر -->
+        <section class="co-card soft-card" aria-labelledby="rightsTitle">
+          <h2 class="rights-title" id="rightsTitle"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M14.8 9.5a3.5 3.5 0 1 0 0 5"/></svg>حفاظت از حقوق پدیدآورندگان و ناشران</h2>
+          <p>تمامی فایل‌ها به نشانی ثبت‌شده حساب خریدار واترمارک اختصاصی و نامرئی دریافت می‌کنند. خرید شما مستقیماً به حمایت از مترجمان و ناشران شریف فرهنگ پارسی اختصاص می‌یابد. بازنشر غیرمجاز به موجب قانون حمایت حقوق مؤلفان پیگرد قانونی دارد.</p>
+        </section>
+      </div>
+
+      <!-- خلاصه سفارش -->
+      <aside class="checkout-side" aria-label="خلاصه سفارش">
+        <section class="co-card summary-card" aria-labelledby="sumTitle">
+          <div class="co-head"><h2 id="sumTitle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3Z"/><path d="M9 8h6M9 12h6"/></svg>خلاصه سفارش نهایی</h2><span class="tag-gray">۳ کتاب برگزیده</span></div>
+
+          <ul class="order-items" id="orderItems">
+            <li class="order-item" data-title="انسان در جستجوی معنی" data-list="78000" data-price="68000">
+              <img class="co-cover" src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=240&q=80" alt="تصویر نمونه برای کتاب انسان در جستجوی معنی" width="62" height="84" loading="lazy">
+              <div class="oi-info"><h3>انسان در جستجوی معنی</h3><p>ویکتور فرانکل • مهین میلانی</p><span class="fmt">EPUB متنی</span></div>
+              <div class="oi-price"><del>۷۸٬۰۰۰</del><strong>۶۸٬۰۰۰</strong><small>تومان</small></div>
+            </li>
+            <li class="order-item" data-title="دنیای سوفی (صوتی کامل)" data-list="170000" data-price="145000">
+              <img class="co-cover" src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=240&q=80" alt="تصویر نمونه برای کتاب دنیای سوفی" width="62" height="84" loading="lazy">
+              <div class="oi-info"><h3>دنیای سوفی (صوتی کامل)</h3><p>یوستین گردر • با صدای نیما رئیسی</p><span class="fmt audio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg>صوتی ۱۸ ساعت</span></div>
+              <div class="oi-price"><del>۱۷۰٬۰۰۰</del><strong>۱۴۵٬۰۰۰</strong><small>تومان</small></div>
+            </li>
+            <li class="order-item" data-title="تفکر، سریع و کند" data-list="120000" data-price="110000">
+              <img class="co-cover" src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&w=240&q=80" alt="تصویر نمونه برای کتاب تفکر، سریع و کند" width="62" height="84" loading="lazy">
+              <div class="oi-info"><h3>تفکر، سریع و کند</h3><p>دانیل کانمن • فاطمه ساداتی</p><span class="fmt">PDF غنی‌شده</span></div>
+              <div class="oi-price"><del>۱۲۰٬۰۰۰</del><strong>۱۱۰٬۰۰۰</strong><small>تومان</small></div>
+            </li>
+          </ul>
+
+          <form class="promo-form" id="promoForm" novalidate>
+            <label class="promo-field" for="promoInput"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9a2 2 0 0 0 0 4v3a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-3a2 2 0 0 1 0-4V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v3Z"/><path d="M14 5v12"/></svg><input id="promoInput" type="text" placeholder="کد تخفیف یا هدیه فرهنگی..." autocomplete="off" dir="auto" aria-describedby="promoMessage"></label>
+            <button class="promo-btn" type="submit">اعمال</button>
+          </form>
+          <p class="promo-message" id="promoMessage" role="status" aria-live="polite">برای نمونه، کد <b dir="ltr">BOOKMARK10</b> را امتحان کنید.</p>
+
+          <dl class="totals">
+            <div><dt>جمع اقلام سبد خرید</dt><dd id="subtotalValue"></dd></div>
+            <div><dt><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12 12 3h8v8l-9 9-8-8Z"/><circle cx="16" cy="8" r="1.2"/></svg>تخفیف اشتراک ویژه سارا راد</dt><dd id="discountValue"></dd></div>
+            <div class="hidden" id="promoRow"><dt>کد تخفیف <b dir="ltr" id="promoCodeLabel"></b></dt><dd id="promoValue"></dd></div>
+            <div><dt>مالیات بر ارزش افزوده <span class="tag-green">معافیت ناشران</span></dt><dd>۰ تومان</dd></div>
+          </dl>
+
+          <div class="grand-total"><div><strong>مبلغ نهایی پرداختی:</strong><small id="grandNote">شامل تمامی ۳ اثر از منتخب</small></div><div class="grand-amount"><b id="grandValue"></b><span>تومان</span></div></div>
+
+          <button class="pay-btn" id="payButton" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span id="payLabel"></span></button>
+          <p class="demo-note"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>بدون ادعای اتصال به درگاه واقعی؛ با زدن دکمه وارد صفحه شبیه‌ساز تأیید و فاکتور می‌شوید.</p>
+
+          <div class="trust-row">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.5 2.8 7.8 7 10 4.2-2.2 7-5.5 7-10V6l-7-3Z"/></svg>SSL ۲۵۶ بیتی</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.5-8 5.5 5.5 0 0 1 10.6-1A4.5 4.5 0 0 1 17 18"/><path d="M12 11v8m-3-3 3 3 3-3"/></svg>دانلود نامحدود</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/></svg>پشتیبانی ۲۴ ساعته</span>
+          </div>
+        </section>
+
+        <div class="help-strip">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.6 2.2c-.7.4-1.1.9-1.1 1.8M12 17h.01"/></svg>
+          <div><strong>نیاز به راهنمایی در پرداخت دارید؟</strong><small>کارشناسان فنی بوکمارک آنلاین هستند</small></div>
+          <button class="strip-link" type="button" id="helpChat">گفتگو</button>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- فاکتور شبیه‌ساز -->
+  <dialog class="invoice" id="invoiceDialog" aria-labelledby="invoiceTitle">
+    <div class="invoice-inner">
+      <span class="invoice-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span>
+      <h2 id="invoiceTitle">پرداخت با موفقیت شبیه‌سازی شد</h2>
+      <p class="invoice-lead">این صفحه نمایشی است و تراکنش واقعی انجام نشده است.</p>
+      <dl class="invoice-meta">
+        <div><dt>شماره سفارش</dt><dd id="invoiceNumber"></dd></div>
+        <div><dt>روش پرداخت</dt><dd id="invoiceMethod"></dd></div>
+        <div id="invoiceGiftRow" class="hidden"><dt>هدیه برای</dt><dd id="invoiceGift" dir="ltr"></dd></div>
+      </dl>
+      <ul class="invoice-items" id="invoiceItems"></ul>
+      <div class="invoice-total"><span>مبلغ پرداختی</span><strong id="invoiceTotal"></strong></div>
+      <div class="invoice-actions">
+        <button class="btn btn-primary" type="button" id="goLibrary">رفتن به کتابخانه من</button>
+        <button class="btn btn-light" type="button" id="closeInvoice">بستن</button>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="site-footer" id="newsletter">
+    <div class="footer-grid">
+      <div class="footer-about"><a class="footer-brand" href="main.html">بوک<span>مارک.</span></a><p>جایی برای پیدا کردن کتاب‌هایی که نگاه ما را به جهان کمی تغییر می‌دهند. آرام بگردید، کشف کنید و بخوانید.</p><div class="socials"><a href="#newsletter" aria-label="اینستاگرام">◎</a><a href="#newsletter" aria-label="تلگرام">➤</a><a href="#newsletter" aria-label="شبکه اجتماعی">◉</a></div></div>
+      <div><h3>دسترسی سریع</h3><a href="main.html">صفحه اصلی</a><a href="main.html#bestsellers">فروشگاه کتاب‌ها</a><a href="index.html#details">درباره کتاب</a><a href="contact.html">تماس با ما</a></div>
+      <div><h3>خدمات بوکمارک</h3><a href="main.html#assistant">دستیار هوش مصنوعی</a><a href="main.html#bestsellers">پیشنهاد کتاب</a><a href="faq.html#order">راهنمای خرید</a><a href="faq.html">پرسش‌های متداول</a></div>
+      <div class="newsletter"><h3>نامه‌ای از دنیای کتاب</h3><p>برای دریافت معرفی کتاب‌ها و پیشنهادهای تازه عضو شوید.</p><form id="newsletterForm"><label class="sr-only" for="emailInput">نشانی ایمیل</label><input id="emailInput" type="email" placeholder="ایمیل شما" required autocomplete="email"><button type="submit">عضویت در خبرنامه <span aria-hidden="true">←</span></button></form><small id="newsletterMessage" role="status" aria-live="polite"></small></div>
+    </div>
+    <div class="footer-bottom"><span>© ۱۴۰۵ بوکمارک؛ برای کسانی که عاشق کشف‌اند.</span><div><span>حریم خصوصی</span><span>قوانین استفاده</span><span>پشتیبانی</span></div></div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

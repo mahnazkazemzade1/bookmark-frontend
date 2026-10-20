@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#173f35">
+  <meta name="description" content="کتاب‌خوان دیجیتال بوکمارک؛ خواندن انسان در جستجوی معنی با تنظیمات قلم، پوسته‌های دیداری، یادداشت و هایلایت.">
+  <title>کتاب‌خوان دیجیتال | انسان در جستجوی معنی | بوکمارک</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="digital-reader.css">
+  <script src="digital-reader.js" defer></script>
+</head>
+<body data-theme="cream">
+  <!-- مجموعه آیکون‌ها: stroke خطی با سر گرد، هم‌سبک سایت -->
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></symbol>
+    <symbol id="i-book-open" viewBox="0 0 24 24"><path d="M3 5.500C5.600 4.400 8.700 4.500 12 6c3.300-1.500 6.400-1.600 9-.5V18c-2.600-1.100-5.700-1-9 .5-3.300-1.500-6.400-1.600-9-.5V5.500Z"/><path d="M12 6v12.500"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8.500" r="3.500"/><path d="M5 20c.8-3.600 3.700-5.500 7-5.500s6.200 1.900 7 5.500"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></symbol>
+    <symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M6.500 4.500A1.500 1.500 0 0 1 8 3h8a1.500 1.500 0 0 1 1.500 1.500V21L12 17.500 6.500 21V4.500Z"/></symbol>
+    <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3.500a8.500 8.500 0 1 0 0 17c1.400 0 2-.9 1.500-2-.5-1.200.2-2.500 1.600-2.500H17a3.500 3.500 0 0 0 3.500-3.500C20.500 7 16.700 3.500 12 3.500Z"/><path d="M8 11h.01M11 7.500h.01M15.500 8.500h.01"/></symbol>
+    <symbol id="i-text" viewBox="0 0 24 24"><path d="M4 7V5h10v2M9 5v14M7 19h4M15 11V9.500h5V11M17.500 9.500V19M16 19h3"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h8M18 7h2M4 12h2M12 12h8M4 17h8M18 17h2"/><circle cx="15" cy="7" r="2.200"/><circle cx="9" cy="12" r="2.200"/><circle cx="15" cy="17" r="2.200"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.500 4.500 4.500L19 7.500"/></symbol>
+    <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8.500 12.200 2.500 2.500 4.500-5"/></symbol>
+    <symbol id="i-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.500"/></symbol>
+    <symbol id="i-play-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.500" fill="currentColor" stroke="none"/><path d="m10.200 8.500 4.800 3.500-4.800 3.500Z" fill="#fff" stroke="none"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.500 10.900c.6.500 1 1.200 1 2.100h5c0-.9.400-1.600 1-2.100A6 6 0 0 0 12 3Z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-timer" viewBox="0 0 24 24"><circle cx="12" cy="13.500" r="6.800"/><path d="M12 10v3.800l2.200 1.200M9.500 3h5M12 3v3.200"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.500"/><path d="m8.800 13.500-1.300 7 4.500-2.500 4.500 2.500-1.300-7"/></symbol>
+    <symbol id="i-focus" viewBox="0 0 24 24"><path d="M4 8V5.500A1.500 1.500 0 0 1 5.500 4H8M16 4h2.500A1.500 1.500 0 0 1 20 5.500V8M20 16v2.500a1.500 1.500 0 0 1-1.500 1.500H16M8 20H5.500A1.500 1.500 0 0 1 4 18.500V16"/><circle cx="12" cy="12" r="2.500"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.500"/><circle cx="18" cy="6" r="2.500"/><circle cx="18" cy="18" r="2.500"/><path d="m8.200 10.800 7.600-3.600M8.200 13.200l7.600 3.600"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="m12 3 1.800 5.200L19 10l-5.200 1.800L12 17l-1.800-5.200L5 10l5.200-1.800L12 3ZM18.500 16l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7.7-2Z"/></symbol>
+    <symbol id="i-notes" viewBox="0 0 24 24"><path d="M4 6.500h10M4 11.500h6.500M4 16.500h4"/><path d="m13.500 18.500.8-3.400 5.200-5.200a1.500 1.500 0 0 1 2.100 2.100l-5.200 5.200-2.900.7Z"/></symbol>
+    <symbol id="i-note-box" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h5"/></symbol>
+    <symbol id="i-skip" viewBox="0 0 24 24"><path d="M6.500 6.500v11l8-5.500-8-5.500Z"/><path d="M18 6v12"/></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+    <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 6-6 6 6 6"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M20 12H4M10 6l-6 6 6 6"/></symbol>
+    <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.500-5.800L4 8.500"/><path d="M4 4v4.500h4.500"/></symbol>
+  </svg>
+
+  <!-- نوار بالای کتاب‌خوان -->
+  <header class="reader-bar" id="readerBar">
+    <div class="reader-bar-inner">
+      <a class="back-link" href="digital-library.html"><svg aria-hidden="true"><use href="#i-arrow-right"/></svg><span>کتابخانه</span><svg class="back-book" aria-hidden="true"><use href="#i-book-open"/></svg></a>
+
+      <div class="reader-title"><strong>انسان در جستجوی معنی</strong><small>بخش اول: تجربه‌های اردوگاه کار اجباری</small></div>
+
+      <div class="reader-tools" role="toolbar" aria-label="ابزارهای کتاب‌خوان">
+        <div class="size-group" role="group" aria-label="اندازه قلم"><button class="size-chip" id="sizeDown" type="button" aria-label="کوچک‌تر کردن قلم">A-</button><button class="size-chip" id="sizeUp" type="button" aria-label="بزرگ‌تر کردن قلم">A+</button></div>
+        <button class="tool-button tool-optional" id="toolFont" type="button" aria-label="تنظیمات قلم" title="تنظیمات قلم"><svg aria-hidden="true"><use href="#i-text"/></svg></button>
+        <button class="tool-button tool-optional" id="toolTheme" type="button" aria-label="تغییر پوسته" title="تغییر پوسته"><svg aria-hidden="true"><use href="#i-palette"/></svg></button>
+        <button class="tool-button is-saved" id="toolBookmark" type="button" aria-pressed="true" aria-label="نشانک این صفحه" title="نشانک این صفحه"><svg aria-hidden="true"><use href="#i-bookmark"/></svg></button>
+        <button class="tool-button tool-optional" id="toolFullscreen" type="button" aria-label="تمام‌صفحه" title="تمام‌صفحه"><svg aria-hidden="true"><use href="#i-expand"/></svg></button>
+        <button class="account-button" id="toolAccount" type="button" aria-label="حساب کاربری"><svg aria-hidden="true"><use href="#i-user"/></svg></button>
+      </div>
+    </div>
+    <div class="goal-strip" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="68" aria-label="پیشرفت مطالعه کتاب"><i style="--value:68%"></i></div>
+  </header>
+
+  <main class="reader-layout" id="top">
+    <div class="reader-main">
+      <article class="reader-paper" id="readerArticle" aria-labelledby="chapterTitle">
+        <span class="page-ribbon is-saved" id="pageRibbon" aria-hidden="true"></span>
+
+        <div class="chapter-meta">
+          <div class="chapter-meta-start"><span class="chapter-chip">فصل سوم • دفتر اول</span><span>صفحه ۱۶۴ • زمان خوانش: ۶ دقیقه</span></div>
+          <span class="chapter-topic"><svg aria-hidden="true"><use href="#i-book-open"/></svg>روان‌درمانی اگزیستانسیال و بازماندگان</span>
+        </div>
+
+        <h1 id="chapterTitle">تداوم امید در سخت‌ترین شرایط</h1>
+        <p class="chapter-lead">بخش نخست: روایتی از درون یک اردوگاه اجباری؛ جایی که انسان در سخت‌ترین آزمون‌ها، دلیلی برای ادامه دادن می‌جوید.</p>
+
+        <div class="article-body" id="articleBody">
+          <p><span class="drop-cap">ما</span> در روزهای دشوار اغلب فکر می‌کنیم امید یعنی منتظر ماندنِ شرایط بهتر. اما آنچه در این فصل دیده می‌شود چیز دیگری است: امید تصمیمی است که هر روز از نو گرفته می‌شود، حتی وقتی هیچ چیز بیرونی پشتیبان آن نیست. کسانی که توانستند دوام بیاورند لزوماً قوی‌ترین یا خوش‌بین‌ترین نبودند؛ آن‌ها چیزی داشتند که به آینده پیوندشان می‌داد: کاری ناتمام، آدمی که منتظرشان بود، یا باوری که هنوز رهایش نکرده بودند.</p>
+
+          <p>این نگاه از تجربهٔ شخصی نویسنده جدا نیست. او می‌بیند که انسان را می‌شود از بسیاری چیزها محروم کرد، اما نه از آخرین اختیار: اینکه به آنچه بر او می‌گذرد چگونه پاسخ بدهد. همین اختیار کوچک، در هر موقعیتی که باشیم، مرز میان تسلیم شدن و ایستادن را مشخص می‌کند.</p>
+
+          <blockquote class="pull-quote">
+            <p>«کسی که چرایی برای زیستن دارد، می‌تواند با هر چگونه‌ای بسازد.»</p>
+            <footer><span>— فردریش نیچه، نقل‌شده توسط ویکتور فرانکل</span><span>یادداشت صفحه ۱۶۲</span></footer>
+          </blockquote>
+
+          <p>از این منظر، هر روز پرسش تازه‌ای پیش رویمان می‌گذارد؛ نه اینکه «زندگی از من چه می‌خواهد؟» بلکه «من در این لحظه چه پاسخی به زندگی می‌دهم؟». پاسخ‌ها همیشه بزرگ و قهرمانانه نیستند. گاهی تنها مراقبت از همبندی بیمار است، یا نگه داشتن یک خاطره، یا امتناع از اینکه تلخی بر همه چیز غلبه کند.</p>
+
+          <p class="highlight-block" id="savedHighlight">آزادی درونی را حتی در بدترین شرایط هم نمی‌شود گرفت؛ چون آدم تا آخرین نفس می‌تواند درباره معنای رنجی که می‌کشد تصمیم بگیرد.</p>
+
+          <aside class="margin-note" aria-label="حاشیه‌نویسی من">
+            <div class="margin-note-head"><strong><svg aria-hidden="true"><use href="#i-note-box"/></svg>حاشیه‌نویسی من (سارا ر.)</strong><small>امروز، ۱۱:۴۵ ق.ظ</small></div>
+            <p>«این پیوند میان آزادی و مسئولیت را باید دوباره بخوانم؛ شاید معنا را نمی‌شود پیدا کرد، فقط می‌شود ساخت.»</p>
+          </aside>
+
+          <p>اگر زندگی معنایی دارد، رنج هم باید معنایی داشته باشد؛ چون رنج، مثل مرگ و سرنوشت، بخشی جدایی‌ناپذیر از زندگی است. پرسش اصلی این می‌شود که انسان رنج را چگونه می‌پذیرد و با آن چه می‌کند، و آیا همین مواجهه می‌تواند عمقی به او ببخشد که در روزهای آسان به دست نمی‌آمد.</p>
+
+          <figure class="article-figure">
+            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1400&q=80" alt="کتابخانه‌ای قدیمی با قفسه‌های پر از کتاب و نور ملایمی که از پنجره می‌تابد" loading="lazy">
+            <figcaption><span>نمای نمادین: پرتوهای امید در حصار؛ بازتاب اندیشه‌های معنادرمانی</span><strong>تصویر تزئینی</strong></figcaption>
+          </figure>
+
+          <p>بسیاری از آدم‌ها در شرایط سخت باور می‌کنند همهٔ فرصت‌های معنادار از دست رفته است. اما همان‌جا، در دل محدودیت، گاهی فرصتی واقعی پدید می‌آید: فرصت اینکه رنج را به دستاوردی انسانی تبدیل کنیم، یا دست‌کم نگذاریم از ما موجودی تلخ و بی‌اعتماد بسازد.</p>
+        </div>
+
+        <div class="page-turn">
+          <span class="section-end"><i aria-hidden="true"></i>پایان زیربخش دوم از گفتار نخست</span>
+          <div class="page-turn-actions">
+            <button class="turn-button" id="prevPage" type="button"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg>صفحه قبل</button>
+            <span class="turn-dot" aria-hidden="true"></span>
+            <button class="turn-button is-next" id="nextPage" type="button">صفحه بعد<svg aria-hidden="true"><use href="#i-chevron-left"/></svg></button>
+          </div>
+        </div>
+      </article>
+
+      <p class="shortcut-hint" aria-label="میانبرهای صفحه‌کلید"><span>ورق زدن برگه‌ها <kbd>→</kbd><kbd>←</kbd></span><i aria-hidden="true"></i><span>حالت غوطه‌وری کامل (Zen) <kbd>F</kbd></span><i aria-hidden="true"></i><span>هایلایت فوری <kbd>H</kbd></span></p>
+    </div>
+
+    <aside class="reader-sidebar" aria-label="تنظیمات و فهرست کتاب">
+      <section class="side-card settings-card" aria-labelledby="settingsTitle">
+        <div class="side-card-head"><h2 id="settingsTitle"><svg aria-hidden="true"><use href="#i-sliders"/></svg>تنظیمات پالایش خوانش</h2><button class="reset-button" id="resetSettings" type="button">تنظیمات پیش‌فرض</button></div>
+
+        <div class="setting-group" id="fontGroup">
+          <span class="setting-label" id="fontLabel">قلم کتاب</span>
+          <div class="font-options" role="radiogroup" aria-labelledby="fontLabel">
+            <button class="font-option is-active" type="button" role="radio" aria-checked="true" data-font="vazir" style="font-family:'Vazirmatn',sans-serif">وزیرمتن (اصلی)<svg aria-hidden="true"><use href="#i-check"/></svg></button>
+            <button class="font-option" type="button" role="radio" aria-checked="false" data-font="classic" style="font-family:'Noto Naskh Arabic',serif">ساحل کلاسیک<svg aria-hidden="true"><use href="#i-check"/></svg></button>
+            <button class="font-option" type="button" role="radio" aria-checked="false" data-font="plex" style="font-family:'IBM Plex Sans Arabic',sans-serif">ایران‌سنس مونو<svg aria-hidden="true"><use href="#i-check"/></svg></button>
+            <button class="font-option" type="button" role="radio" aria-checked="false" data-font="light" style="font-family:'Vazirmatn',sans-serif;font-weight:300">شبنم سبک<svg aria-hidden="true"><use href="#i-check"/></svg></button>
+          </div>
+        </div>
+
+        <div class="setting-group">
+          <div class="setting-row"><label class="setting-label" for="fontSize">اندازه خط قلم</label><strong class="setting-value" id="fontSizeValue">۱۸ پیکسل</strong></div>
+          <div class="range-row"><span>کوچک</span><input id="fontSize" type="range" min="14" max="26" step="1" value="18"><span>بزرگ</span></div>
+        </div>
+
+        <div class="setting-group">
+          <div class="setting-row"><span class="setting-label" id="leadingLabel">فاصله سطور (Leading)</span><strong class="setting-value" id="leadingValue">فراخ (۲٫۱)</strong></div>
+          <div class="leading-options" role="radiogroup" aria-labelledby="leadingLabel">
+            <button class="leading-option" type="button" role="radio" aria-checked="false" data-leading="1.7" data-name="فشرده">فشرده</button>
+            <button class="leading-option" type="button" role="radio" aria-checked="false" data-leading="1.9" data-name="استاندارد">استاندارد</button>
+            <button class="leading-option is-active" type="button" role="radio" aria-checked="true" data-leading="2.1" data-name="فراخ">فراخ کتابی</button>
+          </div>
+        </div>
+
+        <div class="setting-group">
+          <span class="setting-label" id="themeLabel">پوسته‌های دیداری مطالعه</span>
+          <div class="theme-options" role="radiogroup" aria-labelledby="themeLabel">
+            <button class="theme-option is-active" type="button" role="radio" aria-checked="true" data-theme-value="cream"><span class="theme-dot dot-cream"><svg aria-hidden="true"><use href="#i-check"/></svg></span>کاغذ کرم</button>
+            <button class="theme-option" type="button" role="radio" aria-checked="false" data-theme-value="ivory"><span class="theme-dot dot-ivory"></span>عاجی روز</button>
+            <button class="theme-option" type="button" role="radio" aria-checked="false" data-theme-value="dusk"><span class="theme-dot dot-dusk"></span>شامگاهی</button>
+            <button class="theme-option" type="button" role="radio" aria-checked="false" data-theme-value="eink"><span class="theme-dot dot-eink">E-I</span>جوهر الکترونیک</button>
+          </div>
+        </div>
+
+        <button class="zen-button" id="zenButton" type="button" aria-pressed="false"><svg aria-hidden="true"><use href="#i-focus"/></svg>ورود به حالت سکوت و تمرکز کامل (Zen)</button>
+      </section>
+
+      <section class="side-card toc-card" aria-label="فهرست و ابزارهای کتاب">
+        <div class="side-tabs" role="tablist" aria-label="بخش‌های کناری">
+          <button class="side-tab is-active" id="sideTabToc" type="button" role="tab" aria-selected="true" aria-controls="panelToc" data-panel="panelToc">سرفصل‌ها</button>
+          <button class="side-tab" id="sideTabNotes" type="button" role="tab" aria-selected="false" aria-controls="panelNotes" data-panel="panelNotes" tabindex="-1">نشانک‌ها (۷)</button>
+          <button class="side-tab" id="sideTabAi" type="button" role="tab" aria-selected="false" aria-controls="panelAi" data-panel="panelAi" tabindex="-1"><svg aria-hidden="true"><use href="#i-bulb"/></svg>دستیار هوش</button>
+        </div>
+
+        <div class="side-panel" id="panelToc" role="tabpanel" aria-labelledby="sideTabToc">
+          <ul class="toc-list">
+            <li><button class="toc-item is-done" type="button"><span class="toc-state"><svg aria-hidden="true"><use href="#i-check-circle"/></svg></span><span class="toc-copy"><strong>مقدمه نویسنده بر ویراست جدید</strong><small>صفحات ۹ تا ۲۴ • پایان‌یافته</small></span><b class="toc-percent">۱۰۰٪</b></button></li>
+            <li><button class="toc-item is-done" type="button"><span class="toc-state"><svg aria-hidden="true"><use href="#i-check-circle"/></svg></span><span class="toc-copy"><strong>ورود به اردوگاه کار اجباری</strong><small>صفحات ۲۵ تا ۹۸ • پایان‌یافته</small></span><b class="toc-percent">۱۰۰٪</b></button></li>
+            <li><button class="toc-item is-current" type="button" aria-current="location"><span class="toc-state"><svg aria-hidden="true"><use href="#i-play-circle"/></svg></span><span class="toc-copy"><strong>تداوم امید در سخت‌ترین شرایط</strong><small>صفحه ۱۶۴ از ۲۴۰ • در حال خواندن</small></span><b class="toc-percent is-badge" data-live="percent">۶۸٪</b></button></li>
+            <li><button class="toc-item" type="button"><span class="toc-state"><svg aria-hidden="true"><use href="#i-circle"/></svg></span><span class="toc-copy"><strong>اصول بنیادین معنادرمانی (Logotherapy)</strong><small>صفحات ۱۸۵ تا ۲۲۲ • ناخوانده</small></span><b class="toc-percent">۰٪</b></button></li>
+            <li><button class="toc-item" type="button"><span class="toc-state"><svg aria-hidden="true"><use href="#i-circle"/></svg></span><span class="toc-copy"><strong>ضمیمه: تجلی امید در جامعه مدرن</strong><small>صفحات ۲۲۳ تا ۲۴۰ • ناخوانده</small></span><b class="toc-percent">۰٪</b></button></li>
+          </ul>
+
+          <div class="glossary-card">
+            <div class="glossary-head"><strong><svg aria-hidden="true"><use href="#i-bulb"/></svg>فرهنگ‌واژه هوشمند بوکمارک</strong><span class="glossary-tag">مفاهیم کلیدی</span></div>
+            <p><b>لوگوتراپی (Logotherapy):</b> رویکرد درمانی ویکتور فرانکل که انگیزه اصلی بشر را نه کسب لذت (فروید) و نه دستیابی به قدرت (آدلر)، بلکه «معناجویی در زندگی» می‌داند.</p>
+            <button class="glossary-link" type="button" data-demo="تحلیل کامل این فصل در نسخه نمایشی فعال نیست.">مطالعه تحلیل موشکافانه این فصل<svg aria-hidden="true"><use href="#i-arrow-left"/></svg></button>
+          </div>
+        </div>
+
+        <div class="side-panel hidden" id="panelNotes" role="tabpanel" aria-labelledby="sideTabNotes">
+          <ul class="note-list">
+            <li><span class="note-kind"><svg aria-hidden="true"><use href="#i-bookmark"/></svg></span><div><strong>صفحه ۱۶۴ · هایلایت</strong><p>آزادی درونی را حتی در بدترین شرایط هم نمی‌شود گرفت…</p></div></li>
+            <li><span class="note-kind"><svg aria-hidden="true"><use href="#i-note-box"/></svg></span><div><strong>صفحه ۱۶۴ · یادداشت من</strong><p>این پیوند میان آزادی و مسئولیت را باید دوباره بخوانم…</p></div></li>
+            <li><span class="note-kind"><svg aria-hidden="true"><use href="#i-bookmark"/></svg></span><div><strong>صفحه ۱۶۲ · نشانک</strong><p>کسی که چرایی برای زیستن دارد…</p></div></li>
+          </ul>
+          <p class="panel-hint">چهار نشانک دیگر در بخش‌های قبلی کتاب ذخیره شده است.</p>
+        </div>
+
+        <div class="side-panel hidden" id="panelAi" role="tabpanel" aria-labelledby="sideTabAi">
+          <p class="panel-hint">از دستیار بخواهید همین بخش را خلاصه کند، مفهومی را توضیح دهد یا درباره متن پرسشی بپرسد.</p>
+          <div class="ai-actions">
+            <button type="button" data-demo="دستیار هوش مصنوعی در نسخه نمایشی متصل نیست."><svg aria-hidden="true"><use href="#i-sparkle"/></svg>خلاصه این بخش</button>
+            <button type="button" data-demo="دستیار هوش مصنوعی در نسخه نمایشی متصل نیست."><svg aria-hidden="true"><use href="#i-sparkle"/></svg>توضیح مفاهیم کلیدی</button>
+            <button type="button" data-demo="دستیار هوش مصنوعی در نسخه نمایشی متصل نیست."><svg aria-hidden="true"><use href="#i-sparkle"/></svg>پرسش از متن</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="side-card session-card" aria-label="جلسه مطالعه امروز">
+        <span class="session-icon"><svg aria-hidden="true"><use href="#i-timer"/></svg></span>
+        <div class="session-copy"><strong>جلسه مطالعه امروز</strong><small>۴۲ دقیقه خوانش پیوسته • میانگین تمرکز ۹۴٪</small></div>
+        <span class="session-award"><svg aria-hidden="true"><use href="#i-award"/></svg></span>
+      </section>
+    </aside>
+  </main>
+
+  <!-- ابزار شناور متن انتخاب‌شده -->
+  <div class="selection-toolbar hidden" id="selectionToolbar" role="toolbar" aria-label="ابزار متن انتخاب‌شده">
+    <button type="button" data-selection="highlight"><i class="gold-dot" aria-hidden="true"></i>رنگ طلایی</button><span class="sep" aria-hidden="true"></span>
+    <button type="button" data-selection="note"><svg aria-hidden="true"><use href="#i-notes"/></svg>یادداشت</button><span class="sep" aria-hidden="true"></span>
+    <button type="button" data-selection="ai"><svg aria-hidden="true"><use href="#i-sparkle"/></svg>تحلیل هوشمند</button><span class="sep" aria-hidden="true"></span>
+    <button type="button" data-selection="share" aria-label="اشتراک‌گذاری متن"><svg aria-hidden="true"><use href="#i-share"/></svg></button>
+  </div>
+
+  <!-- نوار شناور پیشرفت فصل -->
+  <div class="chapter-dock" id="chapterDock">
+    <button class="dock-button" type="button" data-demo="فصل قبل در نسخه نمایشی در دسترس نیست."><svg aria-hidden="true"><use href="#i-skip"/></svg>فصل قبل</button>
+    <div class="dock-progress">
+      <div class="dock-labels"><span>صفحه <b data-live="page">۱۶۴</b> از ۲۴۰</span><strong><b data-live="chapterMin">۱۸</b> دقیقه تا پایان این فصل</strong><span data-live="percent">۶۸٪</span></div>
+      <div class="dock-meter"><i style="--value:68%" data-live="meter"></i></div>
+    </div>
+    <button class="dock-button" type="button" data-demo="فصل بعد در نسخه نمایشی در دسترس نیست.">فصل بعد<svg class="flip" aria-hidden="true"><use href="#i-skip"/></svg></button>
+  </div>
+
+  <!-- نوار وضعیت پایین صفحه -->
+  <footer class="status-bar">
+    <span class="status-page">صفحه <b data-live="page">۱۶۴</b> از ۲۴۰ (<b data-live="percent">۶۸٪</b>)</span>
+    <span class="status-time"><svg aria-hidden="true"><use href="#i-clock"/></svg><b data-live="sectionMin">۲۸</b> دقیقه تا پایان بخش</span>
+    <div class="status-views" role="group" aria-label="نمای کتاب‌خوان">
+      <button class="status-view is-active" type="button" data-view="text" aria-pressed="true">متن خوانداری</button>
+      <button class="status-view" type="button" data-view="toc" aria-pressed="false">فهرست</button>
+      <button class="status-view" type="button" data-view="notes" aria-pressed="false">یادداشت‌ها</button>
+    </div>
+  </footer>
+
+  <button class="zen-exit" id="zenExit" type="button">خروج از حالت Zen <kbd>Esc</kbd></button>
+  <p class="toast" id="toast" role="status" aria-live="polite"></p>
+</body>
+</html>
